@@ -1,0 +1,214 @@
+@import './css/cssReset';
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+html{
+	body{
+		position: relative;
+		font-family: 'Rubik', sans-serif;
+		#root{
+			.Routes{
+				.TopNavigation{
+					position: fixed;
+					left: 250px;
+					right: 0;
+					height: 60px;
+					transition: all .3s;
+					background-color: #f5f6fa;
+					z-index: 1;
+					.navbar-brand{
+
+					}
+				}
+				.TopNavigation-Toogle{
+					left: 110px;
+				}
+				.SideNavigation{
+					position: relative;
+					width: 250px;
+					height: 100vh;
+					z-index: 2;
+					.Row-1{
+						position: fixed;
+						width: 60px;
+						height: 100vh;
+						border-right: 2px solid rgba(0,0,0,.2);
+						ul{
+							text-align: center;
+							li{
+								padding-top: 20px;
+								padding-bottom: 20px;
+								cursor: pointer;
+								transition: all .3s;
+								&:hover{
+									opacity: .5;
+								}
+								svg{
+									color: #fdfdfd;
+									font-size: 30px;
+								}
+							}
+						}
+					}
+					.Row-2{
+						position: fixed;
+						width: 190px;
+						height: 100vh;
+						left: 60px;
+						transition: all .3s;
+						ul{
+							.Main_Title_Row_2{
+								padding: 20px;
+								text-align: center;
+								font-size: 25px;
+								color: #fdfdfd;
+							}
+							.Dropdown{
+								li{
+									position: relative;
+									color: #fdfdfd;
+									padding: 10px 20px 10px 20px;
+									cursor: pointer;
+									transition: all .2s;
+									&:hover{
+										opacity: .5;
+									}
+									&.active{
+										
+										border-top: 2px solid #38ada9;
+										border-bottom: 2px dashed rgba(0,0,0,.2);
+									}
+									a{
+
+									}
+									.Dropdown-Icon{
+										position: absolute;
+										right: 10px;
+										transition: all .3s;
+										&.active{
+											transform: rotate(90deg);
+										}
+									}
+								}
+								.Dropdown_Menu{
+									overflow: hidden;
+									transition: all .3s;
+									.Menu{
+										ul{
+											border-bottom: 2px dashed rgba(0,0,0,.2);
+											.Dropdown_Menu_Icon{
+												width: 20px;
+												font-size: 20px;
+												margin-right: 10px;
+											}
+											li{
+												padding-left: 30px;
+												transition: all .2s;
+												
+												&:hover{
+													
+												}
+												a{
+													color: #fdfdfd;
+													outline: none;
+													&:hover{
+														text-decoration: none;
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						.Btn-Slider{
+							position: absolute;
+							top: 60px;
+							right: -15px;
+							border: none;
+							outline: none;
+							cursor: pointer;
+							height: 30px;
+							width: 30px;
+							border-radius: 50%;
+							background-color:#f5f6fa;
+							&:hover{
+								background-color:#f5f6fa;
+								box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+							}
+							.Btn-Slider-Icon{
+								transition: all .3s linear;
+								&.active{
+									transform: rotate(180deg);
+								}
+							}
+						}
+					}
+					.Row-2-Toggle{
+						width: 50px;
+						ul{
+							display: none;
+							li{
+								padding: 10px;
+							}
+						}
+						.Row-2-toggle{
+						}
+					}
+					.Row-1-Result{
+						position: relative;
+
+						.left{
+							position: fixed;
+							height: 100vh;
+							width: 300px;
+							left: -300px;
+							z-index: 2;
+							overflow: hidden;
+							transition: all .3s;
+							background-color: #f5f6fa;
+							ul{
+								li{
+									padding: 10px 30px 10px 30px;
+									&:hover{
+										background-color: red;
+									}
+								}
+							}
+						}
+						.left-toggle{
+							left: 0px;
+						}
+						.right{
+							position: fixed;
+							height: 100vh;
+							width: 100%;
+							left: 0;
+							z-index: 1;
+							background-color: rgba(0,0,0,.2);
+							display: none;
+							cursor: pointer;	
+						}
+						.right-toggle{
+							display: block;
+						}
+					}
+				}
+				.SideNavigationSlider{
+					width: 50px;
+				}
+				.Content{
+					position: absolute;
+					left: 250px;
+					right: 0;
+					top: 70px;
+					min-height: 100vh;
+					transition: all .3s;
+					background-color: #fdfdfd;
+				}
+				.ContentSlider{
+					left: 110px;
+				}
+			}
+		}
+	}
+}

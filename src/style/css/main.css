@@ -1,0 +1,192 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+html body {
+  position: relative;
+  font-family: 'Rubik', sans-serif; }
+  html body #root .Routes .TopNavigation {
+    position: fixed;
+    left: 250px;
+    right: 0;
+    height: 60px;
+    transition: all .3s;
+    background-color: #f5f6fa;
+    z-index: 1; }
+  html body #root .Routes .TopNavigation-Toogle {
+    left: 110px; }
+  html body #root .Routes .SideNavigation {
+    position: relative;
+    width: 250px;
+    height: 100vh;
+    z-index: 2; }
+    html body #root .Routes .SideNavigation .Row-1 {
+      position: fixed;
+      width: 60px;
+      height: 100vh;
+      border-right: 2px solid rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .SideNavigation .Row-1 ul {
+        text-align: center; }
+        html body #root .Routes .SideNavigation .Row-1 ul li {
+          padding-top: 20px;
+          padding-bottom: 20px;
+          cursor: pointer;
+          transition: all .3s; }
+          html body #root .Routes .SideNavigation .Row-1 ul li:hover {
+            opacity: .5; }
+          html body #root .Routes .SideNavigation .Row-1 ul li svg {
+            color: #fdfdfd;
+            font-size: 30px; }
+    html body #root .Routes .SideNavigation .Row-2 {
+      position: fixed;
+      width: 190px;
+      height: 100vh;
+      left: 60px;
+      transition: all .3s; }
+      html body #root .Routes .SideNavigation .Row-2 ul .Main_Title_Row_2 {
+        padding: 20px;
+        text-align: center;
+        font-size: 25px;
+        color: #fdfdfd; }
+      html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li {
+        position: relative;
+        color: #fdfdfd;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        transition: all .2s; }
+        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li:hover {
+          opacity: .5; }
+        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li.active {
+          border-top: 2px solid #38ada9;
+          border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
+        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li .Dropdown-Icon {
+          position: absolute;
+          right: 10px;
+          transition: all .3s; }
+          html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li .Dropdown-Icon.active {
+            transform: rotate(90deg); }
+      html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu {
+        overflow: hidden;
+        transition: all .3s; }
+        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul {
+          border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
+          html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul .Dropdown_Menu_Icon {
+            width: 20px;
+            font-size: 20px;
+            margin-right: 10px; }
+          html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul li {
+            padding-left: 30px;
+            transition: all .2s; }
+            html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul li a {
+              color: #fdfdfd;
+              outline: none; }
+              html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul li a:hover {
+                text-decoration: none; }
+      html body #root .Routes .SideNavigation .Row-2 .Btn-Slider {
+        position: absolute;
+        top: 60px;
+        right: -15px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background-color: #f5f6fa; }
+        html body #root .Routes .SideNavigation .Row-2 .Btn-Slider:hover {
+          background-color: #f5f6fa;
+          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); }
+        html body #root .Routes .SideNavigation .Row-2 .Btn-Slider .Btn-Slider-Icon {
+          transition: all .3s linear; }
+          html body #root .Routes .SideNavigation .Row-2 .Btn-Slider .Btn-Slider-Icon.active {
+            transform: rotate(180deg); }
+    html body #root .Routes .SideNavigation .Row-2-Toggle {
+      width: 50px; }
+      html body #root .Routes .SideNavigation .Row-2-Toggle ul {
+        display: none; }
+        html body #root .Routes .SideNavigation .Row-2-Toggle ul li {
+          padding: 10px; }
+    html body #root .Routes .SideNavigation .Row-1-Result {
+      position: relative; }
+      html body #root .Routes .SideNavigation .Row-1-Result .left {
+        position: fixed;
+        height: 100vh;
+        width: 300px;
+        left: -300px;
+        z-index: 2;
+        overflow: hidden;
+        transition: all .3s;
+        background-color: #f5f6fa; }
+        html body #root .Routes .SideNavigation .Row-1-Result .left ul li {
+          padding: 10px 30px 10px 30px; }
+          html body #root .Routes .SideNavigation .Row-1-Result .left ul li:hover {
+            background-color: red; }
+      html body #root .Routes .SideNavigation .Row-1-Result .left-toggle {
+        left: 0px; }
+      html body #root .Routes .SideNavigation .Row-1-Result .right {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.2);
+        display: none;
+        cursor: pointer; }
+      html body #root .Routes .SideNavigation .Row-1-Result .right-toggle {
+        display: block; }
+  html body #root .Routes .SideNavigationSlider {
+    width: 50px; }
+  html body #root .Routes .Content {
+    position: absolute;
+    left: 250px;
+    right: 0;
+    top: 70px;
+    min-height: 100vh;
+    transition: all .3s;
+    background-color: #fdfdfd; }
+  html body #root .Routes .ContentSlider {
+    left: 110px; }
