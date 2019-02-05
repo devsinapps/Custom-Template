@@ -93,8 +93,13 @@ class ReduxCrud extends React.Component{
 								getDataRow={this.getDataRow}
 							/>
 						</Col>
+						<Col lg='12'>
+							<Breadcrumb> 
+								<BreadcrumbItem active> Form Actions </BreadcrumbItem>
+							</Breadcrumb>
+						</Col>
 						<Col lg='8' className='mx-auto'>
-							<Card>
+							<Card className='mb-3'>
 								<CardBody>
 									<ReduxForm 
 										value={value}
@@ -106,6 +111,7 @@ class ReduxCrud extends React.Component{
 								</CardBody>
 							</Card>
 						</Col>
+						
 					</Row>
 				</Container>
 			</div>

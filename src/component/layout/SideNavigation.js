@@ -11,19 +11,6 @@ class SideNavigation extends Component{
 		isExpanded: false
 	}
 
-	toggle = () => {
-		const Row_2 = document.getElementsByClassName('Row-2')[0];
-			  Row_2.classList.toggle('Row-2-Toggle')
-
-		const content = document.getElementsByClassName('Content')[0];
-		const topNav = document.getElementsByClassName('TopNavigation')[0];
-			  content.classList.toggle('ContentSlider')
-			  topNav.classList.toggle('TopNavigation-Toogle')
-		this.setState({
-			isExpanded: !this.state.isExpanded
-		})
-	}
-
 	toggleRow = () => {
 		const left = document.getElementsByClassName('left')[0];
 		const right = document.getElementsByClassName('right')[0];
@@ -45,77 +32,93 @@ class SideNavigation extends Component{
 			<div className='SideNavigation'>
 				<div className='Row-1' style={{backgroundColor: colorNavbar}}>
 					<ul>
-						<li> <FontAwesomeIcon icon='search' onClick={this.toggleRow}/> </li>
-						<li> <FontAwesomeIcon icon='calendar-plus' onClick={this.toggleRow} /> </li>
-						<li> <FontAwesomeIcon icon='bars' onClick={this.toggleRow} /> </li>
+						<li> <FontAwesomeIcon icon='user-astronaut' onClick={this.toggleRow}/> </li>
 					</ul>
 				</div>
 				<div className='Row-2' style={{backgroundColor: colorNavbar}}>
 					<ul>
 						<li className='Main_Title_Row_2'> List Menu </li>
-						<Dropdown title="Menu" icon='angle-right'>
-							<ul>
-								<li> 
-									<FontAwesomeIcon icon='tachometer-alt' className='Dropdown_Menu_Icon'/> 
-									<Link to='/'>
-										Dashboard 
-									</Link> 
-								</li>
-								<li> 
-									<FontAwesomeIcon icon='chart-pie' className='Dropdown_Menu_Icon' /> 
-									<Link to='/'>
-										Chart 
-									</Link> 
-								</li>
-								<li> 
-									<FontAwesomeIcon icon='file-alt' className='Dropdown_Menu_Icon' /> 
-									<Link to='/formbootstrap'>
-										Form
-									</Link> 
-								</li>
-								<li> 
-									<FontAwesomeIcon icon='table' className='Dropdown_Menu_Icon' /> 
-									<Link to='/tablebootstrap'>
-										Table 
-									</Link> 
-								</li>
-							</ul>
-						</Dropdown>
-						<Dropdown title="Sample Pages" icon='angle-right'>
-							<ul>
-								<li> 
-									<FontAwesomeIcon icon='cogs' className='Dropdown_Menu_Icon' /> 
-									<Link to='/reduxcrud'> Table Form  </Link> 
-								</li>
-							</ul>
-						</Dropdown>
-						<Dropdown title="View" icon='angle-right'>
-							<ul>
-								<li> 
-									<FontAwesomeIcon icon='cogs' className='Dropdown_Menu_Icon' /> 
-									<Link to='/settingview'> Setting View </Link> 
-								</li>
-							</ul>
-						</Dropdown>
-						<Dropdown title="Auth" icon='angle-right'>
-							<ul>
-								<li> 
-									<FontAwesomeIcon icon='sign-in-alt' className='Dropdown_Menu_Icon' /> 
-									<Link to='/auth'> Sign In </Link> 
-								</li>
-							</ul>
-						</Dropdown>
 					</ul>
-					<button className='Btn-Slider' onClick={this.toggle}> 
-						<FontAwesomeIcon icon='angle-left' className={`Btn-Slider-Icon`+ ` ` + currentClass}/>
-					</button>
+					<div className='Menu'>
+						<ul>
+							<Dropdown title="Menu" icon='angle-right'>
+								<ul>
+									<li> 
+										<FontAwesomeIcon icon='tachometer-alt' className='Dropdown_Menu_Icon'/> 
+										<Link to='/'>
+											Dashboard 
+										</Link> 
+									</li>
+									<li> 
+										<FontAwesomeIcon icon='chart-pie' className='Dropdown_Menu_Icon' /> 
+										<Link to='/charts'>
+											Chart 
+										</Link> 
+									</li>
+									<li> 
+										<FontAwesomeIcon icon='file-alt' className='Dropdown_Menu_Icon' /> 
+										<Link to='/formbootstrap'>
+											Form
+										</Link> 
+									</li>
+									<li> 
+										<FontAwesomeIcon icon='table' className='Dropdown_Menu_Icon' /> 
+										<Link to='/tablebootstrap'>
+											Table 
+										</Link> 
+									</li>
+								</ul>
+							</Dropdown>
+							<Dropdown title="Sample Pages" icon='angle-right'>
+								<ul>
+									<li> 
+										<FontAwesomeIcon icon='cogs' className='Dropdown_Menu_Icon' /> 
+										<Link to='/reduxcrud'> Redux Crud  </Link> 
+									</li>
+									<li> 
+										<FontAwesomeIcon icon='cogs' className='Dropdown_Menu_Icon' /> 
+										<Link to='/firebasecrud'> Firebase Crud  </Link> 
+									</li>
+								</ul>
+							</Dropdown>
+							<Dropdown title="View" icon='angle-right'>
+								<ul>
+									<li> 
+										<FontAwesomeIcon icon='cogs' className='Dropdown_Menu_Icon' /> 
+										<Link to='/settingview'> Setting View </Link> 
+									</li>
+									<li> 
+										<FontAwesomeIcon icon='cogs' className='Dropdown_Menu_Icon' /> 
+										<Link to='/updateprofile'> Update Profile </Link> 
+									</li>
+								</ul>
+							</Dropdown>
+							<Dropdown title="Auth" icon='angle-right'>
+								<ul>
+									<li> 
+										<FontAwesomeIcon icon='sign-in-alt' className='Dropdown_Menu_Icon' /> 
+										<Link to='/auth'> Authentication </Link> 
+									</li>
+								</ul>
+							</Dropdown>
+						</ul>
+					</div>
 				</div>
 				<div className='Row-1-Result'>
 					<div className='left'>
 						<ul>
-							<li> <Link to='/'> Lorem Ipsum is simply dummy text of the printing and typesetting industry </Link> </li>
-							<li> <Link to='/'> Lorem Ipsum is simply dummy text of the printing and typesetting industry </Link> </li>
-							<li> <Link to='/'> Lorem Ipsum is simply dummy text of the printing and typesetting industry </Link> </li>
+							<li> <Link to='/'> About Developer </Link> </li>
+							<li> 
+								<a href='https://github.com/wayscode' target="__blank">
+									<FontAwesomeIcon icon={['fab', 'github']} />
+								</a>
+								<a href='https://www.instagram.com/ways.code/' target="__blank">
+									<FontAwesomeIcon icon={['fab', 'instagram']} />
+								</a>
+								<a href='https://www.facebook.com/sandy.kurniawan.9028' target="__blank">
+									<FontAwesomeIcon icon={['fab', 'facebook']} />
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div className='right' onClick={this.removeToggle}>

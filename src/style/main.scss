@@ -14,10 +14,11 @@ html{
 					height: 60px;
 					transition: all .3s;
 					background-color: #f5f6fa;
-					z-index: 1;
+					z-index: 4;
 					.navbar-brand{
 
 					}
+					
 				}
 				.TopNavigation-Toogle{
 					left: 110px;
@@ -26,7 +27,6 @@ html{
 					position: relative;
 					width: 250px;
 					height: 100vh;
-					z-index: 2;
 					.Row-1{
 						position: fixed;
 						width: 60px;
@@ -62,56 +62,64 @@ html{
 								font-size: 25px;
 								color: #fdfdfd;
 							}
-							.Dropdown{
-								li{
-									position: relative;
-									color: #fdfdfd;
-									padding: 10px 20px 10px 20px;
-									cursor: pointer;
-									transition: all .2s;
-									&:hover{
-										opacity: .5;
-									}
-									&.active{
-										
-										border-top: 2px solid #38ada9;
-										border-bottom: 2px dashed rgba(0,0,0,.2);
-									}
-									a{
-
-									}
-									.Dropdown-Icon{
-										position: absolute;
-										right: 10px;
-										transition: all .3s;
+						}
+						.Menu{
+							max-height: 350px;
+							overflow: hidden;
+							overflow-y: auto;
+							ul{
+								transition: all .3s;
+								.Dropdown{
+									li{
+										position: relative;
+										color: #fdfdfd;
+										padding: 10px 20px 10px 20px;
+										cursor: pointer;
+										transition: all .2s;
+										&:hover{
+											opacity: .5;
+										}
 										&.active{
-											transform: rotate(90deg);
+											
+											border-top: 2px solid #38ada9;
+											border-bottom: 2px dashed rgba(0,0,0,.2);
+										}
+										a{
+
+										}
+										.Dropdown-Icon{
+											position: absolute;
+											right: 10px;
+											transition: all .3s;
+											&.active{
+												transform: rotate(90deg);
+											}
 										}
 									}
-								}
-								.Dropdown_Menu{
-									overflow: hidden;
-									transition: all .3s;
-									.Menu{
-										ul{
-											border-bottom: 2px dashed rgba(0,0,0,.2);
-											.Dropdown_Menu_Icon{
-												width: 20px;
-												font-size: 20px;
-												margin-right: 10px;
-											}
-											li{
-												padding-left: 30px;
-												transition: all .2s;
-												
-												&:hover{
-													
+									.Dropdown_Menu{
+										overflow: hidden;
+										transition: all .3s;
+										.Menu{
+											ul{
+												border-bottom: 2px dashed rgba(0,0,0,.2);
+												.Dropdown_Menu_Icon{
+													width: 20px;
+													font-size: 14px;
+													margin-right: 10px;
 												}
-												a{
-													color: #fdfdfd;
-													outline: none;
+												li{
+													padding-left: 30px;
+													transition: all .2s;
 													&:hover{
-														text-decoration: none;
+														
+													}
+													a{
+														color: #fdfdfd;
+														outline: none;
+														font-size: 14px;
+														&:hover{
+															text-decoration: none;
+														}
 													}
 												}
 											}
@@ -120,33 +128,11 @@ html{
 								}
 							}
 						}
-						.Btn-Slider{
-							position: absolute;
-							top: 60px;
-							right: -15px;
-							border: none;
-							outline: none;
-							cursor: pointer;
-							height: 30px;
-							width: 30px;
-							border-radius: 50%;
-							background-color:#f5f6fa;
-							&:hover{
-								background-color:#f5f6fa;
-								box-shadow: 0px 0px 1px rgba(0,0,0,.5);
-							}
-							.Btn-Slider-Icon{
-								transition: all .3s linear;
-								&.active{
-									transform: rotate(180deg);
-								}
-							}
-						}
+						
 					}
 					.Row-2-Toggle{
-						width: 50px;
 						ul{
-							display: none;
+							opacity: 0;
 							li{
 								padding: 10px;
 							}
@@ -156,21 +142,25 @@ html{
 					}
 					.Row-1-Result{
 						position: relative;
-
 						.left{
 							position: fixed;
 							height: 100vh;
 							width: 300px;
 							left: -300px;
-							z-index: 2;
+							z-index: 6;
 							overflow: hidden;
 							transition: all .3s;
-							background-color: #f5f6fa;
+							background-color: #ffffff;
 							ul{
 								li{
 									padding: 10px 30px 10px 30px;
-									&:hover{
-										background-color: red;
+									text-align: center;
+									a{
+										color: #2f3542;
+										font-size: 25px;
+										&:hover{
+											text-decoration: none;
+										}
 									}
 								}
 							}
@@ -183,7 +173,7 @@ html{
 							height: 100vh;
 							width: 100%;
 							left: 0;
-							z-index: 1;
+							z-index: 5;
 							background-color: rgba(0,0,0,.2);
 							display: none;
 							cursor: pointer;	
@@ -193,17 +183,216 @@ html{
 						}
 					}
 				}
-				.SideNavigationSlider{
-					width: 50px;
-				}
 				.Content{
 					position: absolute;
+					z-index: 3;
 					left: 250px;
 					right: 0;
-					top: 70px;
+					top: 60px;
 					min-height: 100vh;
 					transition: all .3s;
 					background-color: #fdfdfd;
+					padding-top: 20px;
+					.Btn-Slider{
+						position: fixed;
+						top: 60px;
+						left: 235px;
+						border: none;
+						outline: none;
+						cursor: pointer;
+						height: 30px;
+						width: 30px;
+						border-radius: 50%;
+						transition: all .3s;
+						background-color:#f5f6fa;
+
+						&:hover{
+							background-color:#f5f6fa;
+							box-shadow: 0px 0px 1px rgba(0,0,0,.5);
+						}
+						.Btn-Slider-Icon{
+							transition: all .3s linear;
+							&.active{
+								transform: rotate(180deg);
+							}
+						}
+					}
+					.Btn-Slider-Toggle{
+						left: 95px;
+					}
+					.Dashboard{
+						.container-fluid{
+							.row{
+								.col-lg-6:nth-child(1){
+									.card{
+										.card-body{
+											cursor: pointer;
+											background-color: #487eb0;
+											box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
+											.card-title{
+												font-size: 30px;
+												color: #f5f6fa;
+											}
+											.card-text{
+												font-size: 20px;
+												color: #f5f6fa;
+											}
+										}
+									}
+								}
+								.col-lg-6:nth-child(2){
+									.card{
+										.card-body{
+											cursor: pointer;
+											background-color: #0097e6;
+											box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
+											.card-title{
+												font-size: 30px;
+												color: #f5f6fa;
+											}
+											.card-text{
+												font-size: 20px;
+												color: #f5f6fa;
+											}
+										}
+									}
+								}
+								.col-lg-6:nth-child(3){
+									.card{
+										.card-body{
+											cursor: pointer;
+											background-color: #273c75;
+											box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
+											.card-title{
+												font-size: 30px;
+												color: #f5f6fa;
+											}
+											.card-text{
+												font-size: 20px;
+												color: #f5f6fa;
+											}
+										}
+									}
+								}
+								.col-lg-6:nth-child(4){
+									.card{
+										.card-body{
+											cursor: pointer;
+											background-color: #c23616;
+											box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
+											.card-title{
+												font-size: 30px;
+												color: #f5f6fa;
+											}
+											.card-text{
+												font-size: 20px;
+												color: #f5f6fa;
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					.Charts{
+						.container-fluid{
+							.row{
+								.col-lg-12{
+									nav{
+										ol{
+											height: 50px;
+											border-radius: 0;
+											background-color: #f5f6fa;
+											box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+											li{
+												font-size: 17px;
+											}
+										}
+									}
+								}
+								.col-lg-6{
+									.card{
+										border-top: 2px solid #c7ecee;
+										.card-header{
+											background-color: #f5f6fa;
+											border: none;
+											font-size: 17px;
+											color: #2f3640;
+										}
+										.card-body{
+
+										}
+									}
+								}
+							}
+						}
+					}
+					.BootstrapForm{
+						.container-fluid{
+							.row{
+								.col-lg-12{
+									nav{
+										ol{
+											height: 50px;
+											border-radius: 0;
+											background-color: #f5f6fa;
+											box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+											li{
+												font-size: 17px;
+											}
+										}
+									}
+								}
+								.col-lg-6{
+									.card{
+										border-top: 2px solid #c7ecee;
+										.card-header{
+											background-color: #f5f6fa;
+											border: none;
+											font-size: 17px;
+											color: #2f3640;
+										}
+										.card-body{
+
+										}
+									}
+								}
+							}
+						}
+					}
+					.TableBootstrap{
+						.container-fluid{
+							.row{
+								.col-lg-12{
+									nav{
+										ol{
+											height: 50px;
+											border-radius: 0;
+											background-color: #f5f6fa;
+											box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+											li{
+												font-size: 17px;
+											}
+										}
+									}
+								}
+								.col-lg-6{
+									.card{
+										border-top: 2px solid #c7ecee;
+										.card-header{
+											background-color: #f5f6fa;
+											border: none;
+											font-size: 17px;
+											color: #2f3640;
+										}
+										.card-body{
+
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 				.ContentSlider{
 					left: 110px;

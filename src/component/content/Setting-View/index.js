@@ -48,18 +48,12 @@ class SettingView extends React.Component{
 		e.preventDefault();
 		const { uid, firstName, lastName, gender, age, navColor, email, phone, initials, createdAt } = this.state
 		const profile = { uid, firstName, lastName, gender, age, navColor, email, phone, initials, createdAt } 
-		// const updateColor = e.target.navColor.value
-		this.setState({
-			navColor: navColor
-		})
 		this.props.updateView(profile)
 	}
 	render(){
-		console.log(this.state)
 		const { navColor } = this.state
 		const value = { navColor }
 		const { auth, profileAuth, colorList } = this.props
-		console.log(profileAuth)
 		if(auth.uid == null) {
 			alert('Must Sign In First')
 			return <Redirect to='/auth' />

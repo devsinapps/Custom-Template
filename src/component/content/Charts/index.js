@@ -37,7 +37,7 @@ class Summary extends React.Component{
 	render(){
 		const { title, children } = this.props
 		return(
-			<Col lg='6'>
+			<Col lg='6' md='6'>
 				<Card className='mb-3'>
 					<CardHeader> {title} </CardHeader>
 					<CardBody>

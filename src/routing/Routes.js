@@ -6,8 +6,10 @@ import TableBootstrap from './../component/content/Table'
 import BootstrapForm from './../component/content/Form'
 import SettingView from './../component/content/Setting-View'
 import Charts from './../component/content/Charts'
+import UpdateProfile from './../component/content/Update-Profile'
 	//Sample-pages
 	import ReduxCrud from './../component/content/Sample-Pages/ReduxCrud'
+	import FirebaseCrud from './../component/content/Sample-Pages/FirebaseCrud'
 	import GriddleTable from './../component/content/Sample-Pages/GriddleTable'
 //Layout
 import TopNavigation from './../component/layout/TopNavigation'
@@ -20,11 +22,13 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 //Style
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';  
 
-library.add(faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight)
+library.add(faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight,  faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram)
 class Routes extends React.Component{
 	state = {
+		isExpanded: false,
 		defaultColor: "#1e3799",
 		updateColor: ''
 	}
@@ -36,12 +40,28 @@ class Routes extends React.Component{
 			updateColor: color
 		})
 	}
-	render(){
-		
-		const { profile } = this.props
-		const { defaultColor } = this.state
-		const colorNavbar = profile.navColor != null ? profile.navColor : defaultColor
 
+	toggle = () => {
+		const Row_2 = document.getElementsByClassName('Row-2')[0];
+		const content = document.getElementsByClassName('Content')[0];
+		const topNav = document.getElementsByClassName('TopNavigation')[0];
+		const btnSlider = document.getElementsByClassName('Btn-Slider')[0];
+			  Row_2.classList.toggle('Row-2-Toggle')
+			  content.classList.toggle('ContentSlider')
+			  topNav.classList.toggle('TopNavigation-Toogle')
+			  btnSlider.classList.toggle('Btn-Slider-Toggle')
+		
+			  
+		this.setState({
+			isExpanded: !this.state.isExpanded
+		})
+	}
+
+	render(){
+		const { profile } = this.props
+		const { defaultColor, isExpanded } = this.state
+		const colorNavbar = profile.navColor != null ? profile.navColor : defaultColor
+		const currentClass = isExpanded ? 'active' : ''
 		const sendProps = {
 			pathName: '/settingview',
 			colorNavbar: colorNavbar,
@@ -55,17 +75,21 @@ class Routes extends React.Component{
 						colorNavbar={colorNavbar} 
 					/>
 					<div className='Content'>
+						<button className='Btn-Slider' onClick={this.toggle}> 
+							<FontAwesomeIcon icon='angle-left' className={`Btn-Slider-Icon`+ ` ` + currentClass}/>
+						</button>
 						<Switch>
 							<Route path='/' component={Dashboard} exact />
 							<Route path='/auth' component={Auth} />
 							<Route path='/tablebootstrap' component={TableBootstrap} />
 							<Route path='/formbootstrap' component={BootstrapForm} />
 							<Route path='/charts' component={Charts} />
+							<Route path='/updateprofile' component={UpdateProfile} />
 							//Sample Page
 							<Route path='/reduxcrud' component={ReduxCrud} />
+							<Route path='/firebasecrud' component={FirebaseCrud} />
 							<Route path='/griddletable' component={GriddleTable} />
 							<Route path={sendProps} component={SettingView}/>
-							
 						</Switch>
 					</div>
 				</div>

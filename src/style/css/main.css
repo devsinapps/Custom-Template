@@ -56,14 +56,13 @@ html body {
     height: 60px;
     transition: all .3s;
     background-color: #f5f6fa;
-    z-index: 1; }
+    z-index: 4; }
   html body #root .Routes .TopNavigation-Toogle {
     left: 110px; }
   html body #root .Routes .SideNavigation {
     position: relative;
     width: 250px;
-    height: 100vh;
-    z-index: 2; }
+    height: 100vh; }
     html body #root .Routes .SideNavigation .Row-1 {
       position: fixed;
       width: 60px;
@@ -92,64 +91,51 @@ html body {
         text-align: center;
         font-size: 25px;
         color: #fdfdfd; }
-      html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li {
-        position: relative;
-        color: #fdfdfd;
-        padding: 10px 20px 10px 20px;
-        cursor: pointer;
-        transition: all .2s; }
-        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li:hover {
-          opacity: .5; }
-        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li.active {
-          border-top: 2px solid #38ada9;
-          border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
-        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li .Dropdown-Icon {
-          position: absolute;
-          right: 10px;
-          transition: all .3s; }
-          html body #root .Routes .SideNavigation .Row-2 ul .Dropdown li .Dropdown-Icon.active {
-            transform: rotate(90deg); }
-      html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu {
+      html body #root .Routes .SideNavigation .Row-2 .Menu {
+        max-height: 350px;
         overflow: hidden;
-        transition: all .3s; }
-        html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul {
-          border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
-          html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul .Dropdown_Menu_Icon {
-            width: 20px;
-            font-size: 20px;
-            margin-right: 10px; }
-          html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul li {
-            padding-left: 30px;
+        overflow-y: auto; }
+        html body #root .Routes .SideNavigation .Row-2 .Menu ul {
+          transition: all .3s; }
+          html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li {
+            position: relative;
+            color: #fdfdfd;
+            padding: 10px 20px 10px 20px;
+            cursor: pointer;
             transition: all .2s; }
-            html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul li a {
-              color: #fdfdfd;
-              outline: none; }
-              html body #root .Routes .SideNavigation .Row-2 ul .Dropdown .Dropdown_Menu .Menu ul li a:hover {
-                text-decoration: none; }
-      html body #root .Routes .SideNavigation .Row-2 .Btn-Slider {
-        position: absolute;
-        top: 60px;
-        right: -15px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        background-color: #f5f6fa; }
-        html body #root .Routes .SideNavigation .Row-2 .Btn-Slider:hover {
-          background-color: #f5f6fa;
-          box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); }
-        html body #root .Routes .SideNavigation .Row-2 .Btn-Slider .Btn-Slider-Icon {
-          transition: all .3s linear; }
-          html body #root .Routes .SideNavigation .Row-2 .Btn-Slider .Btn-Slider-Icon.active {
-            transform: rotate(180deg); }
-    html body #root .Routes .SideNavigation .Row-2-Toggle {
-      width: 50px; }
-      html body #root .Routes .SideNavigation .Row-2-Toggle ul {
-        display: none; }
-        html body #root .Routes .SideNavigation .Row-2-Toggle ul li {
-          padding: 10px; }
+            html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li:hover {
+              opacity: .5; }
+            html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li.active {
+              border-top: 2px solid #38ada9;
+              border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
+            html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li .Dropdown-Icon {
+              position: absolute;
+              right: 10px;
+              transition: all .3s; }
+              html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li .Dropdown-Icon.active {
+                transform: rotate(90deg); }
+          html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu {
+            overflow: hidden;
+            transition: all .3s; }
+            html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul {
+              border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
+              html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul .Dropdown_Menu_Icon {
+                width: 20px;
+                font-size: 14px;
+                margin-right: 10px; }
+              html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul li {
+                padding-left: 30px;
+                transition: all .2s; }
+                html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul li a {
+                  color: #fdfdfd;
+                  outline: none;
+                  font-size: 14px; }
+                  html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul li a:hover {
+                    text-decoration: none; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle ul {
+      opacity: 0; }
+      html body #root .Routes .SideNavigation .Row-2-Toggle ul li {
+        padding: 10px; }
     html body #root .Routes .SideNavigation .Row-1-Result {
       position: relative; }
       html body #root .Routes .SideNavigation .Row-1-Result .left {
@@ -157,14 +143,18 @@ html body {
         height: 100vh;
         width: 300px;
         left: -300px;
-        z-index: 2;
+        z-index: 6;
         overflow: hidden;
         transition: all .3s;
-        background-color: #f5f6fa; }
+        background-color: #ffffff; }
         html body #root .Routes .SideNavigation .Row-1-Result .left ul li {
-          padding: 10px 30px 10px 30px; }
-          html body #root .Routes .SideNavigation .Row-1-Result .left ul li:hover {
-            background-color: red; }
+          padding: 10px 30px 10px 30px;
+          text-align: center; }
+          html body #root .Routes .SideNavigation .Row-1-Result .left ul li a {
+            color: #2f3542;
+            font-size: 25px; }
+            html body #root .Routes .SideNavigation .Row-1-Result .left ul li a:hover {
+              text-decoration: none; }
       html body #root .Routes .SideNavigation .Row-1-Result .left-toggle {
         left: 0px; }
       html body #root .Routes .SideNavigation .Row-1-Result .right {
@@ -172,21 +162,124 @@ html body {
         height: 100vh;
         width: 100%;
         left: 0;
-        z-index: 1;
+        z-index: 5;
         background-color: rgba(0, 0, 0, 0.2);
         display: none;
         cursor: pointer; }
       html body #root .Routes .SideNavigation .Row-1-Result .right-toggle {
         display: block; }
-  html body #root .Routes .SideNavigationSlider {
-    width: 50px; }
   html body #root .Routes .Content {
     position: absolute;
+    z-index: 3;
     left: 250px;
     right: 0;
-    top: 70px;
+    top: 60px;
     min-height: 100vh;
     transition: all .3s;
-    background-color: #fdfdfd; }
+    background-color: #fdfdfd;
+    padding-top: 20px; }
+    html body #root .Routes .Content .Btn-Slider {
+      position: fixed;
+      top: 60px;
+      left: 235px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      transition: all .3s;
+      background-color: #f5f6fa; }
+      html body #root .Routes .Content .Btn-Slider:hover {
+        background-color: #f5f6fa;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); }
+      html body #root .Routes .Content .Btn-Slider .Btn-Slider-Icon {
+        transition: all .3s linear; }
+        html body #root .Routes .Content .Btn-Slider .Btn-Slider-Icon.active {
+          transform: rotate(180deg); }
+    html body #root .Routes .Content .Btn-Slider-Toggle {
+      left: 95px; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body {
+      cursor: pointer;
+      background-color: #487eb0;
+      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-title {
+        font-size: 30px;
+        color: #f5f6fa; }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-text {
+        font-size: 20px;
+        color: #f5f6fa; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body {
+      cursor: pointer;
+      background-color: #0097e6;
+      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-title {
+        font-size: 30px;
+        color: #f5f6fa; }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-text {
+        font-size: 20px;
+        color: #f5f6fa; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body {
+      cursor: pointer;
+      background-color: #273c75;
+      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-title {
+        font-size: 30px;
+        color: #f5f6fa; }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-text {
+        font-size: 20px;
+        color: #f5f6fa; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body {
+      cursor: pointer;
+      background-color: #c23616;
+      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-title {
+        font-size: 30px;
+        color: #f5f6fa; }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-text {
+        font-size: 20px;
+        color: #f5f6fa; }
+    html body #root .Routes .Content .Charts .container-fluid .row .col-lg-12 nav ol {
+      height: 50px;
+      border-radius: 0;
+      background-color: #f5f6fa;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .Charts .container-fluid .row .col-lg-12 nav ol li {
+        font-size: 17px; }
+    html body #root .Routes .Content .Charts .container-fluid .row .col-lg-6 .card {
+      border-top: 2px solid #c7ecee; }
+      html body #root .Routes .Content .Charts .container-fluid .row .col-lg-6 .card .card-header {
+        background-color: #f5f6fa;
+        border: none;
+        font-size: 17px;
+        color: #2f3640; }
+    html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-12 nav ol {
+      height: 50px;
+      border-radius: 0;
+      background-color: #f5f6fa;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-12 nav ol li {
+        font-size: 17px; }
+    html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-6 .card {
+      border-top: 2px solid #c7ecee; }
+      html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-6 .card .card-header {
+        background-color: #f5f6fa;
+        border: none;
+        font-size: 17px;
+        color: #2f3640; }
+    html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-12 nav ol {
+      height: 50px;
+      border-radius: 0;
+      background-color: #f5f6fa;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-12 nav ol li {
+        font-size: 17px; }
+    html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-6 .card {
+      border-top: 2px solid #c7ecee; }
+      html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-6 .card .card-header {
+        background-color: #f5f6fa;
+        border: none;
+        font-size: 17px;
+        color: #2f3640; }
   html body #root .Routes .ContentSlider {
     left: 110px; }
