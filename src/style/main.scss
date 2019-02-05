@@ -397,6 +397,61 @@ html{
 				.ContentSlider{
 					left: 110px;
 				}
+				.ContentAuth{
+					padding-top: 50px;
+					.Auth{
+						.container-fluid{
+							.row{
+								.col-lg-6{
+									.card{
+										.card-header{
+											button{
+												border: 1px solid black;
+												margin: 20px;
+											}
+										}
+										.card-body{
+											.SignIn{
+												form{
+													.form-group{
+														position: relative;
+														input{
+															height: 50px;
+															border-radius: 0;
+															border: none;
+															border-bottom: 1px solid black;
+															&:focus{
+																box-shadow: none;
+															}
+															&:focus ~.labelInput{
+																top: 0;
+															}
+															&:not(:focus):valid ~.labelInput{
+																top: 0;
+															}
+														}
+														.labelInput{
+															position: absolute;
+															top: 15px;
+															left: 10px;
+															transition: all .3s;
+														}
+														label{
+
+														}
+														button{
+															border-radius: 0;
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	}

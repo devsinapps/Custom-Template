@@ -6,7 +6,8 @@ import Signin from './SignIn'
 import SignUp from './SignUp'
 //Tools
 import { connect } from 'react-redux'
-import { Container, Row, Col, Card, CardBody } from 'reactstrap'
+import { Link } from 'react-router-dom'
+import { Container, Row, Col, Card, CardBody, CardHeader } from 'reactstrap'
 class Auth extends React.Component{
 	state = {
 		defaultCase: 1
@@ -24,22 +25,23 @@ class Auth extends React.Component{
 		})
 	}
 	render(){
+		const { backCase } = this.props.match.path.backCase
 		const { defaultCase } = this.state
 		const { auth } = this.props
-		const btnSIgnOut = auth.uid !== null ? <button onClick={this.props.signOut}> Log Out </button> : null;
-		const viewAuth = defaultCase == 1 ? <Signin /> : <SignUp />;
+		const viewAuth = defaultCase == 1 ? <Signin backCase={this.props.match.path.backCase}/> : <SignUp backCase={this.props.match.path.backCase}/>;
 		return(
 			<div className='Auth'>
 				<Container fluid>
 					<Row>
 						<Col lg='6' className='mx-auto'>
-							<button onClick={this.signInCase}> Sign In </button>
-							<button onClick={this.signUpCase}> Sign Up </button>
 							<Card>
+								<CardHeader className='text-center'>
+									<button onClick={this.signInCase}> Sign In </button>
+									<button onClick={this.signUpCase}> Sign Up </button>
+								</CardHeader>
 								<CardBody>
 									{viewAuth}
 								</CardBody>
-								{btnSIgnOut}
 							</Card>
 						</Col>
 					</Row>
@@ -50,7 +52,6 @@ class Auth extends React.Component{
 }
 
 const mapStateToProps = (state) => {
-		console.log(state)
 	return{
 		auth: state.firebase.auth
 	}

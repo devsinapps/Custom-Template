@@ -48,7 +48,7 @@ export const signUp = (newUser) => {
 				email: newUser.email,
 				password: newUser.password,
 				phone: newUser.phone,
-				navColor: newUser.navColor,
+				navColor: "#1e3799",
 				createdAt: new Date()
 			})
 		}).then(()=>{

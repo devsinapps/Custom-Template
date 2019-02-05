@@ -283,3 +283,28 @@ html body {
         color: #2f3640; }
   html body #root .Routes .ContentSlider {
     left: 110px; }
+  html body #root .Routes .ContentAuth {
+    padding-top: 50px; }
+    html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-header button {
+      border: 1px solid black;
+      margin: 20px; }
+    html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group {
+      position: relative; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input {
+        height: 50px;
+        border-radius: 0;
+        border: none;
+        border-bottom: 1px solid black; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input:focus {
+          box-shadow: none; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input:focus ~ .labelInput {
+          top: 0; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input:not(:focus):valid ~ .labelInput {
+          top: 0; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group .labelInput {
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        transition: all .3s; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group button {
+        border-radius: 0; }

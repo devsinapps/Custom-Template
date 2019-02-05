@@ -15,7 +15,6 @@ class SignUp extends React.Component{
 		lastName: '',
 		gender: '',
 		age: '',
-		navColor: '',
 		keyPass: '',
 		email: '',
 		password: ''
@@ -38,9 +37,11 @@ class SignUp extends React.Component{
 	onSubmit = (e) => {
 		e.preventDefault();
 		this.props.signUp(this.state)
+
+		//Send Parameter 1 to set Default Case Routes
+		this.props.backCase(1)
 	}
 	render(){
-		console.log(this.state)
 		const { step } = this.state
 		switch(step){
 			case 1:

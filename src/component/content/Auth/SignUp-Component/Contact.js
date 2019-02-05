@@ -3,7 +3,7 @@ import { Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap'
 class Contact extends React.Component{
 	render(){
 		return(
-			<div>
+			<Form>
 				<FormGroup>
 					<Label htmlFor='email'> Email </Label>
 					<Input
@@ -22,7 +22,7 @@ class Contact extends React.Component{
 					<Label htmlFor='signin' hidden > Sign Up </Label>
 					<Button block onClick={this.props.nextStep}> Next </Button>
 				</FormGroup>
-			</div>
+			</Form>
 		)
 	}
 }

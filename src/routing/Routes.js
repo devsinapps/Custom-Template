@@ -30,7 +30,8 @@ class Routes extends React.Component{
 	state = {
 		isExpanded: false,
 		defaultColor: "#1e3799",
-		updateColor: ''
+		updateColor: '',
+		defaultCase: 1
 	}
 
 	changeColor = (e) => {
@@ -57,9 +58,22 @@ class Routes extends React.Component{
 		})
 	}
 
+	authCase = () => {	
+		this.setState({
+			defaultCase: 2
+		})
+	}
+
+	backCase = (e) => {
+		this.setState({
+			defaultCase: e
+		})
+	}
+
 	render(){
+		console.log(this.state)
 		const { profile } = this.props
-		const { defaultColor, isExpanded } = this.state
+		const { defaultColor, isExpanded, defaultCase } = this.state
 		const colorNavbar = profile.navColor != null ? profile.navColor : defaultColor
 		const currentClass = isExpanded ? 'active' : ''
 		const sendProps = {
@@ -67,34 +81,56 @@ class Routes extends React.Component{
 			colorNavbar: colorNavbar,
 			changeColor: this.changeColor
 		}
-		return(
-			<BrowserRouter>
-				<div className='Routes'>
-					<TopNavigation />
-					<SideNavigation
-						colorNavbar={colorNavbar} 
-					/>
-					<div className='Content'>
-						<button className='Btn-Slider' onClick={this.toggle}> 
-							<FontAwesomeIcon icon='angle-left' className={`Btn-Slider-Icon`+ ` ` + currentClass}/>
-						</button>
-						<Switch>
-							<Route path='/' component={Dashboard} exact />
-							<Route path='/auth' component={Auth} />
-							<Route path='/tablebootstrap' component={TableBootstrap} />
-							<Route path='/formbootstrap' component={BootstrapForm} />
-							<Route path='/charts' component={Charts} />
-							<Route path='/updateprofile' component={UpdateProfile} />
-							//Sample Page
-							<Route path='/reduxcrud' component={ReduxCrud} />
-							<Route path='/firebasecrud' component={FirebaseCrud} />
-							<Route path='/griddletable' component={GriddleTable} />
-							<Route path={sendProps} component={SettingView}/>
-						</Switch>
+
+		const authProps = {
+			pathName: '/auth',
+			backCase: this.backCase
+		}
+		if(defaultCase === 1) {
+			return(
+				<BrowserRouter>
+					<div className='Routes'>
+						<TopNavigation />
+						<SideNavigation
+							colorNavbar={colorNavbar} 
+							authCase={this.authCase}
+							backCase={this.backCase}
+						/>
+						<div className='Content'>
+							<button className='Btn-Slider' onClick={this.toggle}> 
+								<FontAwesomeIcon icon='angle-left' className={`Btn-Slider-Icon`+ ` ` + currentClass}/>
+							</button>
+							<Switch>
+								<Route path='/' component={Dashboard} exact />
+								<Route path={authProps} component={Auth} />
+								<Route path='/tablebootstrap' component={TableBootstrap} />
+								<Route path='/formbootstrap' component={BootstrapForm} />
+								<Route path='/charts' component={Charts} />
+								<Route path='/updateprofile' component={UpdateProfile} />
+								//Sample Page
+								<Route path='/reduxcrud' component={ReduxCrud} />
+								<Route path='/firebasecrud' component={FirebaseCrud} />
+								<Route path='/griddletable' component={GriddleTable} />
+								<Route path={sendProps} component={SettingView}/>
+							</Switch>
+						</div>
 					</div>
-				</div>
-			</BrowserRouter>
-		)
+				</BrowserRouter>
+			)
+		}else{
+			return(
+				<BrowserRouter>
+					<div className='Routes'>
+						<div className='ContentAuth'>
+							<Switch>
+								<Route path={authProps} component={Auth} />
+							</Switch>
+						</div>
+					</div>
+				</BrowserRouter>
+			)
+		}
+		
 	}
 }
 

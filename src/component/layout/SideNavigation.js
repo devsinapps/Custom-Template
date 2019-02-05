@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 //Tools
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 //Component
 import Dropdown from './Dropdown'
 //Style
@@ -26,8 +27,27 @@ class SideNavigation extends Component{
 	}
 	render(){
 		const { isExpanded } = this.state
-		const { colorNavbar } = this.props
+		const { colorNavbar,auth } = this.props
 		const currentClass = isExpanded ? 'active' : ''
+		const authAction = auth.uid != null ? 
+				<Dropdown title="Auth" icon='angle-right'>
+					<ul>
+						<li> 
+							<FontAwesomeIcon icon='sign-in-alt' className='Dropdown_Menu_Icon' /> 
+							<Link to='/auth' onClick={() => this.props.backCase(1)}> Authentication </Link> 
+						</li>
+					</ul>
+				</Dropdown>
+				:
+			  	<Dropdown title="Auth" icon='angle-right'>
+					<ul>
+						<li> 
+							<FontAwesomeIcon icon='sign-in-alt' className='Dropdown_Menu_Icon' /> 
+							<Link to='/auth' onClick={this.props.authCase}> Authentication </Link> 
+						</li>
+					</ul>
+				</Dropdown>
+				;
 		return(
 			<div className='SideNavigation'>
 				<div className='Row-1' style={{backgroundColor: colorNavbar}}>
@@ -93,14 +113,7 @@ class SideNavigation extends Component{
 									</li>
 								</ul>
 							</Dropdown>
-							<Dropdown title="Auth" icon='angle-right'>
-								<ul>
-									<li> 
-										<FontAwesomeIcon icon='sign-in-alt' className='Dropdown_Menu_Icon' /> 
-										<Link to='/auth'> Authentication </Link> 
-									</li>
-								</ul>
-							</Dropdown>
+							{authAction}
 						</ul>
 					</div>
 				</div>
@@ -131,5 +144,11 @@ class SideNavigation extends Component{
 	}
 }
 
-export default SideNavigation
+const mapStateToProps = (state) => {
+	return{
+		auth: state.firebase.auth
+	}
+}
+
+export default connect(mapStateToProps)(SideNavigation)
 

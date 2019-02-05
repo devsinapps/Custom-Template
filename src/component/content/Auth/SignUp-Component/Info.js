@@ -3,13 +3,14 @@ import { Row, Col, Form, FormGroup, Label, Input, Button } from 'reactstrap'
 class Info extends React.Component{
 	render(){
 		return(
-			<div>
+			<Form>
 				<FormGroup>
 					<Label htmlFor='firstName'> First Name </Label>
 					<Input
 						id='firstName'
 						onChange={this.props.onChange}
 					/>
+					<span className='labelInput'> First Name </span>
 				</FormGroup>
 				<FormGroup>
 					<Label htmlFor='lastName'> Last Name </Label>
@@ -41,19 +42,10 @@ class Info extends React.Component{
 					</Col>
 				</Row>
 				<FormGroup>
-					<Label htmlFor='gender'> Nav Color </Label>
-					<Input type='select' id='navColor' onChange={this.props.onChange}>
-						<option value=''> Select Gender </option>
-						<option value='#1abc9c'> TURQUOISE </option>
-						<option value='#2ecc71'> EMERALD </option>
-						<option value='#3498db'> PETER RIVER </option>
-					</Input>
-				</FormGroup>
-				<FormGroup>
 					<Label htmlFor='signin' hidden > Sign Up </Label>
 					<Button block onClick={this.props.nextStep}> Next </Button>
 				</FormGroup>
-			</div>
+			</Form>
 		)
 	}
 }
