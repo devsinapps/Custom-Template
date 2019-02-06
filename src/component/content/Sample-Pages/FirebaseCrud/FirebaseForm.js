@@ -66,7 +66,7 @@ class FirebaseForm extends React.Component{
 					<Label htmlFor='country' md='3'> Country </Label>
 					<Col md='9'>
 						<Input type='select' id='country' onChange={this.props.onChange}> 
-						<option value={value.country}> Select Country </option>
+						<option value={value.country}> {value.country} </option>
 						{countryState.map((country)=>{
 							return(
 								<option key={country.country} value={country.country} onClick={() => this.getCityOfCountry(country)}> {country.country} </option>
@@ -79,7 +79,7 @@ class FirebaseForm extends React.Component{
 					<Label htmlFor='city' md='3'> City </Label>
 					<Col md='9'>
 						<Input type='select' id='city' onChange={this.props.onChange}>
-							<option value={value.city}> Select City </option>
+							<option value={value.city}> {value.city} </option>
 							{cityOfCountry.map((city)=>{
 								return(
 									<option key={city} value={city}> {city} </option>

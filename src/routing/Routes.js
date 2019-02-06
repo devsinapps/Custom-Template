@@ -102,7 +102,7 @@ class Routes extends React.Component{
 							</button>
 							<Switch>
 								<Route path='/' component={Dashboard} exact />
-								<Route path={authProps} component={Auth} />
+								
 								<Route path='/tablebootstrap' component={TableBootstrap} />
 								<Route path='/formbootstrap' component={BootstrapForm} />
 								<Route path='/charts' component={Charts} />
@@ -111,7 +111,9 @@ class Routes extends React.Component{
 								<Route path='/reduxcrud' component={ReduxCrud} />
 								<Route path='/firebasecrud' component={FirebaseCrud} />
 								<Route path='/griddletable' component={GriddleTable} />
-								<Route path={sendProps} component={SettingView}/>
+								
+								<Route path='/settingview' component={SettingView}/>
+								<Route path={authProps} component={Auth} />
 							</Switch>
 						</div>
 					</div>
