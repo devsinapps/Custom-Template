@@ -207,7 +207,7 @@ html body {
         font-size: 30px;
         color: #f5f6fa; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-text {
-        font-size: 20px;
+        font-size: 17px;
         color: #f5f6fa; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body {
       cursor: pointer;
@@ -217,7 +217,7 @@ html body {
         font-size: 30px;
         color: #f5f6fa; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-text {
-        font-size: 20px;
+        font-size: 17px;
         color: #f5f6fa; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body {
       cursor: pointer;
@@ -227,7 +227,7 @@ html body {
         font-size: 30px;
         color: #f5f6fa; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-text {
-        font-size: 20px;
+        font-size: 17px;
         color: #f5f6fa; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body {
       cursor: pointer;
@@ -237,7 +237,7 @@ html body {
         font-size: 30px;
         color: #f5f6fa; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-text {
-        font-size: 20px;
+        font-size: 17px;
         color: #f5f6fa; }
     html body #root .Routes .Content .Charts .container-fluid .row .col-lg-12 nav ol {
       height: 50px;
@@ -284,27 +284,137 @@ html body {
   html body #root .Routes .ContentSlider {
     left: 110px; }
   html body #root .Routes .ContentAuth {
-    padding-top: 50px; }
-    html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-header button {
-      border: 1px solid black;
-      margin: 20px; }
-    html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group {
-      position: relative; }
-      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input {
+    padding-bottom: 30px; }
+    html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .button_action {
+      padding: 10px;
+      text-align: center; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .button_action button {
+        margin: 5px;
+        height: 50px;
+        border: none;
+        margin-top: 40px;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: #1e3799;
+        transition: all .2s; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .button_action button:hover {
+          background-color: #2645c0; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .button_action button:active {
+          background-color: #192e80; }
+    html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body {
+      box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn .card-title {
+        color: #1e3799;
+        text-align: center;
+        font-size: 35px; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn .card-text {
+        color: #1e3799;
+        text-align: center;
+        font-size: 25px; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group {
+        position: relative;
+        margin-bottom: 30px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input {
+          height: 50px;
+          border-radius: 0;
+          border: none;
+          border-bottom: 2px solid #1e3799;
+          transition: all .3s;
+          padding-left: 50px; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus {
+            box-shadow: none;
+            border-bottom: 2px solid #353b48; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus ~ .labelInput {
+            top: -10px;
+            left: 0;
+            font-size: 14px; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:not(:focus):valid ~ .labelInput {
+            top: -10px;
+            left: 0;
+            font-size: 14px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .labelInput {
+          position: absolute;
+          top: 15px;
+          left: 40px;
+          transition: all .2s;
+          font-size: 17px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .iconForm {
+          position: absolute;
+          top: 15px;
+          left: 10px;
+          transition: all .3s;
+          font-size: 17px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .iconPassword {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          cursor: pointer; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button {
+          height: 50px;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          background-color: #1e3799;
+          transition: all .2s; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button:hover {
+            background-color: #2645c0; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button:active {
+            background-color: #192e80; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp .card-title {
+        color: #1e3799;
+        text-align: center;
+        font-size: 35px; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp .card-text {
+        color: #1e3799;
+        text-align: center;
+        font-size: 25px; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group {
+        position: relative;
+        margin-bottom: 30px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group input {
+          height: 50px;
+          border-radius: 0;
+          border: none;
+          border-bottom: 2px solid #1e3799;
+          transition: all .3s; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group input:focus {
+            box-shadow: none;
+            border-bottom: 2px solid #353b48; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group input:focus ~ .labelInput {
+            top: -10px;
+            left: 0;
+            font-size: 14px; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group input:not(:focus):valid ~ .labelInput {
+            top: -10px;
+            left: 0;
+            font-size: 14px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group .labelInput {
+          position: absolute;
+          top: 15px;
+          left: 10px;
+          transition: all .3s;
+          font-size: 17px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group .iconPassword {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 20px;
+          cursor: pointer; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group button {
+          height: 50px;
+          border: none;
+          border-radius: 0;
+          box-shadow: none;
+          background-color: #1e3799;
+          transition: all .2s; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group button:hover {
+            background-color: #2645c0; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group button:active {
+            background-color: #192e80; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-row .col-md-8 .form-group select {
         height: 50px;
         border-radius: 0;
         border: none;
-        border-bottom: 1px solid black; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input:focus {
-          box-shadow: none; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input:focus ~ .labelInput {
-          top: 0; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group input:not(:focus):valid ~ .labelInput {
-          top: 0; }
-      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group .labelInput {
-        position: absolute;
-        top: 15px;
-        left: 10px;
+        border-bottom: 2px solid #1e3799;
         transition: all .3s; }
-      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-6 .card .card-body .SignIn form .form-group button {
-        border-radius: 0; }

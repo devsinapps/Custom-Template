@@ -22,10 +22,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 //Style
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';  
 
-library.add(faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight,  faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram)
+library.add(faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight,  faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram)
 class Routes extends React.Component{
 	state = {
 		isExpanded: false,
@@ -71,7 +71,6 @@ class Routes extends React.Component{
 	}
 
 	render(){
-		console.log(this.state)
 		const { profile } = this.props
 		const { defaultColor, isExpanded, defaultCase } = this.state
 		const colorNavbar = profile.navColor != null ? profile.navColor : defaultColor
@@ -84,7 +83,8 @@ class Routes extends React.Component{
 
 		const authProps = {
 			pathName: '/auth',
-			backCase: this.backCase
+			backCase: this.backCase,
+			defaultCase: defaultCase
 		}
 		if(defaultCase === 1) {
 			return(

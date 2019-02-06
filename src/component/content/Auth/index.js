@@ -7,7 +7,7 @@ import SignUp from './SignUp'
 //Tools
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { Container, Row, Col, Card, CardBody, CardHeader } from 'reactstrap'
+import { Container, Row, Col, Card, CardBody, CardHeader, Button } from 'reactstrap'
 class Auth extends React.Component{
 	state = {
 		defaultCase: 1
@@ -27,18 +27,19 @@ class Auth extends React.Component{
 	render(){
 		const { backCase } = this.props.match.path.backCase
 		const { defaultCase } = this.state
+		
 		const { auth } = this.props
 		const viewAuth = defaultCase == 1 ? <Signin backCase={this.props.match.path.backCase}/> : <SignUp backCase={this.props.match.path.backCase}/>;
 		return(
 			<div className='Auth'>
 				<Container fluid>
 					<Row>
-						<Col lg='6' className='mx-auto'>
+						<Col lg='5' md='7' sm='7' xs='12' className='mx-auto'>
+							<div className='button_action'>
+								<Button onClick={this.signInCase}> Sign In </Button>
+								<Button onClick={this.signUpCase}> Sign Up </Button>
+							</div>
 							<Card>
-								<CardHeader className='text-center'>
-									<button onClick={this.signInCase}> Sign In </button>
-									<button onClick={this.signUpCase}> Sign Up </button>
-								</CardHeader>
 								<CardBody>
 									{viewAuth}
 								</CardBody>

@@ -54,10 +54,10 @@ class SettingView extends React.Component{
 		const { navColor } = this.state
 		const value = { navColor }
 		const { auth, profileAuth, colorList } = this.props
-		if(auth.uid == null) {
-			alert('Must Sign In First')
-			return <Redirect to='/auth' />
-		}
+		// if(auth.uid == null) {
+		// 	alert('Must Sign In First')
+		// 	return <Redirect to='/auth' />
+		// }
 		if(profileAuth){
 			return(
 				<div className='SettingView'>

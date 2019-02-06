@@ -10,7 +10,7 @@ class Dashboard extends React.Component{
 						<Col lg='6'>
 							<Card className='mb-3'>
 								<CardBody>
-									<CardTitle> Auth </CardTitle>
+									<CardTitle> Easy to Use </CardTitle>
 									<CardText>
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 									</CardText>
@@ -20,7 +20,7 @@ class Dashboard extends React.Component{
 						<Col lg='6'>
 							<Card className='mb-3'>
 								<CardBody>
-									<CardTitle> Menu </CardTitle>
+									<CardTitle> Responsive Design </CardTitle>
 									<CardText>
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 									</CardText>
@@ -30,7 +30,7 @@ class Dashboard extends React.Component{
 						<Col lg='6'>
 							<Card className='mb-3'>
 								<CardBody>
-									<CardTitle> Sample Pages </CardTitle>
+									<CardTitle> Custom Color </CardTitle>
 									<CardText>
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 									</CardText>
@@ -40,7 +40,7 @@ class Dashboard extends React.Component{
 						<Col lg='6'>
 							<Card className='mb-3'>
 								<CardBody>
-									<CardTitle> Update Profile </CardTitle>
+									<CardTitle> Update Feature </CardTitle>
 									<CardText>
 									Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 									</CardText>

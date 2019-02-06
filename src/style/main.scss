@@ -234,7 +234,7 @@ html{
 												color: #f5f6fa;
 											}
 											.card-text{
-												font-size: 20px;
+												font-size: 17px;
 												color: #f5f6fa;
 											}
 										}
@@ -251,7 +251,7 @@ html{
 												color: #f5f6fa;
 											}
 											.card-text{
-												font-size: 20px;
+												font-size: 17px;
 												color: #f5f6fa;
 											}
 										}
@@ -268,7 +268,7 @@ html{
 												color: #f5f6fa;
 											}
 											.card-text{
-												font-size: 20px;
+												font-size: 17px;
 												color: #f5f6fa;
 											}
 										}
@@ -285,7 +285,7 @@ html{
 												color: #f5f6fa;
 											}
 											.card-text{
-												font-size: 20px;
+												font-size: 17px;
 												color: #f5f6fa;
 											}
 										}
@@ -398,36 +398,143 @@ html{
 					left: 110px;
 				}
 				.ContentAuth{
-					padding-top: 50px;
+					padding-bottom: 30px;
 					.Auth{
 						.container-fluid{
 							.row{
-								.col-lg-6{
-									.card{
-										.card-header{
-											button{
-												border: 1px solid black;
-												margin: 20px;
+								.col-lg-5{
+									.button_action{
+										padding: 10px;
+										text-align: center;
+										button{
+											margin: 5px;
+											height: 50px;
+											border: none;
+											margin-top: 40px;
+											border-radius: 0;
+											box-shadow: none;
+											background-color: #1e3799;
+											transition: all .2s;
+											&:hover{
+												background-color: #2645c0;
+											}
+											&:active{
+												background-color: #192e80;
 											}
 										}
+									}
+									.card{
 										.card-body{
+											box-shadow: 0px 0px 2px rgba(0,0,0,.2);
 											.SignIn{
+												.card-title{
+													color: #1e3799;
+													text-align: center;
+													font-size: 35px;
+												}
+												.card-text{
+													color: #1e3799;
+													text-align: center;
+													font-size: 25px;
+												}
 												form{
 													.form-group{
 														position: relative;
+														margin-bottom: 30px;
 														input{
 															height: 50px;
 															border-radius: 0;
 															border: none;
-															border-bottom: 1px solid black;
+															border-bottom: 2px solid #1e3799;
+															transition: all .3s;
+															padding-left: 50px;
 															&:focus{
 																box-shadow: none;
+																border-bottom: 2px solid #353b48;
 															}
 															&:focus ~.labelInput{
-																top: 0;
+																top: -10px;
+																left: 0;
+																font-size: 14px;
 															}
 															&:not(:focus):valid ~.labelInput{
-																top: 0;
+																top: -10px;
+																left: 0;
+																font-size: 14px;
+															}
+														}
+														.labelInput{
+															position: absolute;
+															top: 15px;
+															left: 40px;
+															transition: all .2s;
+															font-size: 17px;
+														}
+														.iconForm{
+															position: absolute;
+															top: 15px;
+															left: 10px;
+															transition: all .3s;
+															font-size: 17px;
+														}
+														.iconPassword{
+															position: absolute;
+															top: 10px;
+															right: 10px;
+															font-size: 20px;
+															cursor: pointer;
+														}
+														button{
+															height: 50px;
+															border: none;
+															border-radius: 0;
+															box-shadow: none;
+															background-color: #1e3799;
+															transition: all .2s;
+															&:hover{
+																background-color: #2645c0;
+															}
+															&:active{
+																background-color: #192e80;
+															}
+														}
+													}
+												}
+											}
+											.SignUp{
+												.card-title{
+													color: #1e3799;
+													text-align: center;
+													font-size: 35px;
+												}
+												.card-text{
+													color: #1e3799;
+													text-align: center;
+													font-size: 25px;
+												}
+												form{
+													.form-group{
+														position: relative;
+														margin-bottom: 30px;
+														input{
+															height: 50px;
+															border-radius: 0;
+															border: none;
+															border-bottom: 2px solid #1e3799;
+															transition: all .3s;
+															&:focus{
+																box-shadow: none;
+																border-bottom: 2px solid #353b48;
+															}
+															&:focus ~.labelInput{
+																top: -10px;
+																left: 0;
+																font-size: 14px;
+															}
+															&:not(:focus):valid ~.labelInput{
+																top: -10px;
+																left: 0;
+																font-size: 14px;
 															}
 														}
 														.labelInput{
@@ -435,12 +542,43 @@ html{
 															top: 15px;
 															left: 10px;
 															transition: all .3s;
+															font-size: 17px;
 														}
-														label{
-
+														.iconPassword{
+															position: absolute;
+															top: 10px;
+															right: 10px;
+															font-size: 20px;
+															cursor: pointer;
 														}
 														button{
+															height: 50px;
+															border: none;
 															border-radius: 0;
+															box-shadow: none;
+															background-color: #1e3799;
+															transition: all .2s;
+															&:hover{
+																background-color: #2645c0;
+															}
+															&:active{
+																background-color: #192e80;
+															}
+														}
+													}
+													.form-row{
+														.col-md-8{
+															.form-group{
+																label{
+																}
+																select{
+																	height: 50px;
+																	border-radius: 0;
+																	border: none;
+																	border-bottom: 2px solid #1e3799;
+																	transition: all .3s;
+																}
+															}
 														}
 													}
 												}

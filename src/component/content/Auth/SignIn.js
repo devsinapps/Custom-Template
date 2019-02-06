@@ -4,11 +4,19 @@ import { signIn } from './../../../store/actions/authActions'
 //Tools
 import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
-import { Form, FormGroup, Label, Input, Button } from 'reactstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Form, FormGroup, Label, Input, Button, CardTitle, CardText } from 'reactstrap'
 class Signin extends React.Component{
 	state = {
+		isExpanded: false,
 		email: '',
 		password: ''
+	}
+
+	iconChange = () => {
+		this.setState({
+			isExpanded: !this.state.isExpanded
+		})
 	}
 
 	onChange = (e) => {
@@ -25,10 +33,15 @@ class Signin extends React.Component{
 		this.props.backCase(1)
 	}
 	render(){
+		const { isExpanded } = this.state
 		const { auth } = this.props
+		const iconPassword = isExpanded ? 'eye' : 'eye-slash';
+		const typePassword = isExpanded ? 'text': 'password';
 		if(auth.uid != null) return <Redirect to='/' />
 		return(
 		<div className='SignIn'>
+			<CardTitle> Sign In </CardTitle>
+			<CardText> Custom Template </CardText>
 			<Form onSubmit={this.onSubmit}>
 				<FormGroup>
 					<Input
@@ -37,15 +50,18 @@ class Signin extends React.Component{
 						required
 					/>
 					<span className='labelInput'> Email </span>
+					<span className='iconForm'> <FontAwesomeIcon icon='at' /> </span>
 				</FormGroup>
 				<FormGroup>
 					<Input
-						type='password'
+						type={typePassword}
 						id='password'
 						onChange={this.onChange}
 						required
 					/>
-					<span className='labelInput'> Email </span>
+					<span className='labelInput'> Password </span>
+					<span className='iconForm'> <FontAwesomeIcon icon='lock' /> </span>
+					<span className='iconPassword' onClick={this.iconChange}> <FontAwesomeIcon icon={iconPassword} /> </span>
 				</FormGroup>
 				<FormGroup>
 					<Label htmlFor='signin' hidden > Sign In </Label>
