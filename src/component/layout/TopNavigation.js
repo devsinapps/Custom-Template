@@ -1,25 +1,74 @@
 import React from 'react'
+import img from './../../assets/images/default.png'
 //Actions
 import { signOut } from './../../store/actions/authActions'
 import { connect } from 'react-redux'
-import { Navbar, NavbarBrand } from 'reactstrap'
+import { Link } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Navbar, NavbarBrand, Button, Card, CardBody, CardTitle, CardFooter, CardText } from 'reactstrap'
 
 class TopNavigation extends React.Component{
+	state = {
+		isExpanded: false
+	}
+
+	toggle = () => {
+		this.setState({
+			isExpanded: !this.state.isExpanded
+		})
+	}
 	render(){
-		const { auth } = this.props 
-		const btnLogOut = auth.uid != null ? <button onClick={this.props.signOut}> Log Out </button> : null ;
+		const { isExpanded } = this.state
+		const { auth, profile } = this.props 
+		const styleProfileAuth = isExpanded ? 'block' : 'none';
+		const viewProfile = auth.uid != null ? 
+							<div className='viewProfile'>
+								<CardTitle> {profile.firstName + ' ' + profile.lastName }</CardTitle>
+								<CardText> {profile.email} </CardText>
+							</div>
+							: 
+							<div className='viewProfile'>
+								<CardTitle>Guest</CardTitle>
+							</div>
+							;
+		const btnLogOut = auth.uid != null ? <FontAwesomeIcon icon='sign-out-alt' onClick={this.props.signOut} className='btnSignOut' /> : null ;
+		const btnLogIn = auth.uid == null ? 
+						<Link to='/auth' onClick={this.props.authCase}>
+						<FontAwesomeIcon icon='sign-in-alt' className='btnSignIn' /> 
+						</Link>
+						: 
+						null 
+						;
 		return(
 			<Navbar className='TopNavigation'>
-				<NavbarBrand> Custom Template </NavbarBrand>
-				{btnLogOut}
+				<div className='Menu'>
+					<Button onClick={this.toggle} className='profileToggle'> 
+						<FontAwesomeIcon icon='user-circle' />
+					</Button> 
+					<CardTitle> Custom Template </CardTitle>
+					<div className='ProfileAuth' style={{display: styleProfileAuth}}>
+						<Card>
+							<CardBody>
+								<img src={img} />
+								{viewProfile}
+							</CardBody>
+							<CardFooter>
+								{btnLogIn}
+								{btnLogOut}
+							</CardFooter>
+						</Card>
+					</div>
+				</div>
 			</Navbar>
 		)
 	}
 }
 
 const mapStateToProps = (state) => {
+	console.log(state)
 	return{
-		auth: state.firebase.auth
+		auth: state.firebase.auth,
+		profile: state.firebase.profile
 	}
 }
 

@@ -6,7 +6,7 @@ import Signin from './SignIn'
 import SignUp from './SignUp'
 //Tools
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { Container, Row, Col, Card, CardBody, CardHeader, Button } from 'reactstrap'
 class Auth extends React.Component{
 	state = {
@@ -25,11 +25,9 @@ class Auth extends React.Component{
 		})
 	}
 	render(){
-		const { backCase } = this.props.match.path.backCase
 		const { defaultCase } = this.state
-		
-		const { auth } = this.props
-		const viewAuth = defaultCase == 1 ? <Signin backCase={this.props.match.path.backCase}/> : <SignUp backCase={this.props.match.path.backCase}/>;
+		const { auth, backCase } = this.props
+		const viewAuth = defaultCase == 1 ? <Signin backCase={backCase}/> : <SignUp backCase={backCase}/>;
 		return(
 			<div className='Auth'>
 				<Container fluid>

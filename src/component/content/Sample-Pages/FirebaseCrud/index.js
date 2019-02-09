@@ -1,4 +1,5 @@
 import React from 'react'
+import Loading from './../../../../assets/images/Loading.png'
 //Actions
 import { inputEmployee, deleteEmployee, updateEmployee } from './../../../../store/actions/firebaseCrudActions'
 //Component
@@ -107,8 +108,8 @@ class FirebaseCrud extends React.Component{
 			)
 		}else{
 			return(
-				<div>
-					Loading
+				<div className='Loading text-center'>
+					<img src={Loading} />
 				</div>
 			)
 		}

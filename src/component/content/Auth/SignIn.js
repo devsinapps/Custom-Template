@@ -47,9 +47,10 @@ class Signin extends React.Component{
 					<Input
 						id='email'
 						onChange={this.onChange}
+						placeholder='Email'
 						required
 					/>
-					<span className='labelInput'> Email </span>
+					
 					<span className='iconForm'> <FontAwesomeIcon icon='at' /> </span>
 				</FormGroup>
 				<FormGroup>
@@ -57,9 +58,10 @@ class Signin extends React.Component{
 						type={typePassword}
 						id='password'
 						onChange={this.onChange}
+						placeholder='Password'
 						required
 					/>
-					<span className='labelInput'> Password </span>
+					
 					<span className='iconForm'> <FontAwesomeIcon icon='lock' /> </span>
 					<span className='iconPassword' onClick={this.iconChange}> <FontAwesomeIcon icon={iconPassword} /> </span>
 				</FormGroup>

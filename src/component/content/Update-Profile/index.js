@@ -1,4 +1,5 @@
 import React from 'react'
+import Loading from './../../../assets/images/Loading.png'
 //Actions
 import { updateProfile } from './../../../store/actions/updateProfileActions'
 //Assets
@@ -8,9 +9,11 @@ import UpdateForm from './UpdateForm'
 //Tools
 import { connect } from 'react-redux'
 import { compose } from 'redux'
+import { Link } from 'react-router-dom'
 import { firestoreConnect } from 'react-redux-firebase'
 //Style
-import { Container, Row, Col, Card, CardBody, Button, CardFooter, CardTitle } from 'reactstrap'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Container, Row, Col, Card, CardBody, Button, CardFooter, CardTitle, CardText } from 'reactstrap'
 class UpdateProfile extends React.Component{
 	state = {
 		uid: '',
@@ -59,7 +62,6 @@ class UpdateProfile extends React.Component{
 		}
 	}
 	render(){
-		console.log(this.state)
 		const { uid, firstName, lastName, gender, age, navColor, email, phone, initials, createdAt } = this.state
 		const { profileAuth } = this.props 
 		const value = { uid, firstName, lastName, gender, age, navColor, email, phone, initials, createdAt }
@@ -67,7 +69,7 @@ class UpdateProfile extends React.Component{
 								null 
 								: 
 								<CardFooter>
-									<Button block color='warning' onClick={this.getProfile}> Update Profile </Button>
+									<Button block onClick={this.getProfile}> Update Profile </Button>
 								</CardFooter>
 								;
 
@@ -98,9 +100,27 @@ class UpdateProfile extends React.Component{
 						<Row>
 							<Col lg='4' md='4' sm='4'>
 								<Card className='mb-3'>
-									<CardBody className='text-center'>
-										<img src={img} style={imgStyle}/>
-										<CardTitle> {profileAuth.firstName + ' ' + profileAuth.lastName} </CardTitle>
+									<CardBody>
+										<div className='text-center'>
+											<img src={img} style={imgStyle}/>
+											<CardTitle> {profileAuth.firstName + ' ' + profileAuth.lastName} </CardTitle>
+										</div>
+										<CardText> 
+											<FontAwesomeIcon icon='candy-cane' />
+											{profileAuth.gender} 
+										</CardText>
+										<CardText> 
+											<FontAwesomeIcon icon='leaf' />
+											{profileAuth.age} 
+										</CardText>
+										<CardText> 
+											<FontAwesomeIcon icon='envelope' />
+											{profileAuth.email} 
+										</CardText>
+										<CardText> 
+											<FontAwesomeIcon icon='phone' />
+											{profileAuth.phone} 
+										</CardText>
 									</CardBody>
 									{displayAction}
 								</Card>
@@ -114,8 +134,19 @@ class UpdateProfile extends React.Component{
 			)
 		}else{
 			return(
-				<div>
-					Loading
+				<div className='authAlertCard'>
+					<Container>
+						<Row>
+							<Col lg='4' className='mx-auto'>
+								<Card>
+									<CardBody>
+										<CardTitle> Must Sign In to Setting Vie </CardTitle>
+										<Link to='/auth' onClick={this.props.backCase}> Sign In </Link>
+									</CardBody>
+								</Card>
+							</Col>
+						</Row>
+					</Container>
 				</div>
 			)
 		}

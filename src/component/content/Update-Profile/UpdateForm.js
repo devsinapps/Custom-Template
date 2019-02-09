@@ -6,8 +6,8 @@ class UpdateForm extends Component{
 		const displayAction = value.uid.length > 0 ? 
 			<FormGroup className='text-center'>
 				<Label htmlFor="btn" hidden> Btn Action </Label>
-				<Button color='warning'> Update </Button> {' '}
-				<Button color='info'> Reset </Button>
+				<Button> Update </Button> {' '}
+				<Button> Reset </Button>
 			</FormGroup>
 			:
 			null

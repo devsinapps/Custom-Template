@@ -56,7 +56,73 @@ html body {
     height: 60px;
     transition: all .3s;
     background-color: #f5f6fa;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
     z-index: 4; }
+    html body #root .Routes .TopNavigation .Menu {
+      position: absolute;
+      right: 10px; }
+      html body #root .Routes .TopNavigation .Menu .profileToggle {
+        border-radius: 10px;
+        box-shadow: none;
+        border: none;
+        display: inline-block;
+        background-color: transparent; }
+        html body #root .Routes .TopNavigation .Menu .profileToggle svg {
+          font-size: 25px;
+          color: #34495e; }
+      html body #root .Routes .TopNavigation .Menu .card-title {
+        display: inline-block; }
+      html body #root .Routes .TopNavigation .Menu .ProfileAuth {
+        position: fixed;
+        top: 60px;
+        right: 48px;
+        width: 230px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.4); }
+        html body #root .Routes .TopNavigation .Menu .ProfileAuth .card {
+          border-radius: 0; }
+          html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-body {
+            background-color: #fdfdfd;
+            text-align: center; }
+            html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-body img {
+              width: 100px;
+              height: 100px;
+              cursor: pointer;
+              border-radius: 50%; }
+            html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-body .viewProfile {
+              margin-top: 20px; }
+              html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-body .viewProfile .card-title {
+                font-size: 15px;
+                font-weight: bold; }
+              html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-body .viewProfile .card-text {
+                font-size: 14px; }
+          html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-footer {
+            background-color: #fdfdfd;
+            position: relative;
+            height: 50px; }
+            html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-footer .btnSignIn {
+              position: absolute;
+              left: 15px;
+              height: 30px;
+              box-shadow: none;
+              font-size: 25px;
+              color: #34495e;
+              background-color: transparent;
+              cursor: pointer;
+              transition: all .2s; }
+              html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-footer .btnSignIn:hover {
+                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4)); }
+            html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-footer .btnSignOut {
+              position: absolute;
+              right: 15px;
+              height: 30px;
+              box-shadow: none;
+              font-size: 25px;
+              color: #34495e;
+              background-color: transparent;
+              cursor: pointer;
+              transition: all .2s; }
+              html body #root .Routes .TopNavigation .Menu .ProfileAuth .card .card-footer .btnSignOut:hover {
+                filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.4)); }
   html body #root .Routes .TopNavigation-Toogle {
     left: 110px; }
   html body #root .Routes .SideNavigation {
@@ -152,9 +218,15 @@ html body {
           text-align: center; }
           html body #root .Routes .SideNavigation .Row-1-Result .left ul li a {
             color: #2f3542;
-            font-size: 25px; }
-            html body #root .Routes .SideNavigation .Row-1-Result .left ul li a:hover {
-              text-decoration: none; }
+            font-size: 25px;
+            margin: 20px;
+            cursor: pointer; }
+            html body #root .Routes .SideNavigation .Row-1-Result .left ul li a svg {
+              color: #2d3436;
+              transition: all .3s; }
+              html body #root .Routes .SideNavigation .Row-1-Result .left ul li a svg:hover {
+                filter: drop-shadow(0px 0px rgba(0, 0, 0, 0.5));
+                transform: scale(1.5); }
       html body #root .Routes .SideNavigation .Row-1-Result .left-toggle {
         left: 0px; }
       html body #root .Routes .SideNavigation .Row-1-Result .right {
@@ -199,6 +271,23 @@ html body {
           transform: rotate(180deg); }
     html body #root .Routes .Content .Btn-Slider-Toggle {
       left: 95px; }
+    html body #root .Routes .Content .Loading {
+      margin-top: 100px; }
+      html body #root .Routes .Content .Loading img {
+        width: 50px;
+        height: 50px;
+        animation: Spinner infinite 3s linear; }
+    html body #root .Routes .Content .authAlertCard {
+      margin-top: 100px; }
+      html body #root .Routes .Content .authAlertCard .container .row .col-lg-4 .card {
+        border-radius: 0;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+        html body #root .Routes .Content .authAlertCard .container .row .col-lg-4 .card .card-body {
+          text-align: center; }
+          html body #root .Routes .Content .authAlertCard .container .row .col-lg-4 .card .card-body .card-title {
+            font-size: 20px; }
+          html body #root .Routes .Content .authAlertCard .container .row .col-lg-4 .card .card-body a {
+            font-size: 17px; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body {
       cursor: pointer;
       background-color: #487eb0;
@@ -281,6 +370,64 @@ html body {
         border: none;
         font-size: 17px;
         color: #2f3640; }
+    html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card {
+      border-radius: 0;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); }
+      html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-body .text-center .card-title {
+        margin-top: 20px; }
+      html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-body .card-text {
+        font-size: 17px; }
+        html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-body .card-text svg {
+          width: 30px;
+          font-size: 17px; }
+      html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-footer {
+        background-color: #fdfdfd; }
+        html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-footer button {
+          box-shadow: none;
+          border-radius: 0;
+          border: none;
+          background-color: #f1c40f;
+          transition: all .2s; }
+          html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-footer button:hover {
+            background-color: #f2ca26; }
+          html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-footer button:active {
+            background-color: #d9b00d; }
+    html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-8 .card {
+      border-radius: 0;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); }
+      html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-8 .card .card-body form .form-group button {
+        box-shadow: none;
+        border-radius: 0;
+        border: none;
+        background-color: #f1c40f;
+        transition: all .2s; }
+        html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-8 .card .card-body form .form-group button:hover {
+          background-color: #f2ca26; }
+        html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-8 .card .card-body form .form-group button:active {
+          background-color: #d9b00d; }
+    html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 nav ol {
+      height: 50px;
+      border-radius: 0;
+      background-color: #f5f6fa;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 nav ol li {
+        font-size: 17px; }
+    html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 .card {
+      border: none; }
+      html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 .card .card-body button {
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        background-image: linear-gradient(right, #00cec9, #d63031); }
+    html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(2) .col-lg-12 .card .card-header {
+      text-align: center;
+      background-color: #fdfdfd; }
+    html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(2) .col-lg-12 .card .card-body form .text-center {
+      margin-top: 20px; }
+      html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(2) .col-lg-12 .card .card-body form .text-center button {
+        border: none;
+        border-radius: 0;
+        background-image: linear-gradient(left, #00cec9, #d63031); }
   html body #root .Routes .ContentSlider {
     left: 110px; }
   html body #root .Routes .ContentAuth {
@@ -290,10 +437,9 @@ html body {
       text-align: center; }
       html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .button_action button {
         margin: 5px;
-        height: 50px;
         border: none;
         margin-top: 40px;
-        border-radius: 0;
+        border-radius: 5px;
         box-shadow: none;
         background-color: #1e3799;
         transition: all .2s; }
@@ -320,27 +466,21 @@ html body {
           border: none;
           border-bottom: 2px solid #1e3799;
           transition: all .3s;
-          padding-left: 50px; }
+          padding-left: 30px; }
           html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus {
             box-shadow: none;
             border-bottom: 2px solid #353b48; }
-          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus ~ .labelInput {
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus ~ .iconForm {
             top: -10px;
-            left: 0;
+            left: 10px;
             font-size: 14px; }
-          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:not(:focus):valid ~ .labelInput {
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:not(:focus):valid ~ .iconForm {
             top: -10px;
-            left: 0;
+            left: 10px;
             font-size: 14px; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .labelInput {
-          position: absolute;
-          top: 15px;
-          left: 40px;
-          transition: all .2s;
-          font-size: 17px; }
         html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .iconForm {
           position: absolute;
-          top: 15px;
+          top: 12px;
           left: 10px;
           transition: all .3s;
           font-size: 17px; }
@@ -351,9 +491,8 @@ html body {
           font-size: 20px;
           cursor: pointer; }
         html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button {
-          height: 50px;
           border: none;
-          border-radius: 0;
+          border-radius: 10px;
           box-shadow: none;
           background-color: #1e3799;
           transition: all .2s; }
@@ -418,3 +557,61 @@ html body {
         border: none;
         border-bottom: 2px solid #1e3799;
         transition: all .3s; }
+
+@media screen and (max-width: 600px) {
+  html body #root .Routes .TopNavigation {
+    left: 110px; }
+  html body #root .Routes .TopNavigation-Toogle {
+    left: 250px;
+    right: -250px; }
+  html body #root .Routes .SideNavigation {
+    position: fixed; }
+    html body #root .Routes .SideNavigation .Row-1 {
+      position: fixed; }
+    html body #root .Routes .SideNavigation .Row-2 {
+      position: fixed; }
+      html body #root .Routes .SideNavigation .Row-2 ul {
+        opacity: 0; }
+      html body #root .Routes .SideNavigation .Row-2 .Menu ul {
+        opacity: 0; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle ul {
+      opacity: 1; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul {
+      opacity: 1; }
+  html body #root .Routes .Content {
+    left: 110px; }
+    html body #root .Routes .Content .Btn-Slider {
+      left: 95px; }
+    html body #root .Routes .Content .Btn-Slider-Toggle {
+      left: 235px; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-title {
+      font-size: 20px;
+      font-weight: bold; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-text {
+      font-size: 15px; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-title {
+      font-size: 20px;
+      font-weight: bold; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-text {
+      font-size: 15px; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-title {
+      font-size: 20px;
+      font-weight: bold; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-text {
+      font-size: 15px; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-title {
+      font-size: 20px;
+      font-weight: bold; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-text {
+      font-size: 15px; }
+    html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 .card {
+      border: none; }
+  html body #root .Routes .ContentSlider {
+    left: 250px;
+    right: -250px; } }
+
+@keyframes Spinner {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }

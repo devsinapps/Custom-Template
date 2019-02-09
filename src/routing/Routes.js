@@ -22,10 +22,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 //Style
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faCandyCane, faEnvelope, faPhone, faLeaf, faUserCircle, faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';  
 
-library.add(faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight,  faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram)
+library.add( faCandyCane, faEnvelope, faPhone, faLeaf, faUserCircle, faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight,  faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram)
 class Routes extends React.Component{
 	state = {
 		isExpanded: false,
@@ -71,26 +71,18 @@ class Routes extends React.Component{
 	}
 
 	render(){
+		console.log(this.state)
 		const { profile } = this.props
 		const { defaultColor, isExpanded, defaultCase } = this.state
 		const colorNavbar = profile.navColor != null ? profile.navColor : defaultColor
 		const currentClass = isExpanded ? 'active' : ''
-		const sendProps = {
-			pathName: '/settingview',
-			colorNavbar: colorNavbar,
-			changeColor: this.changeColor
-		}
-
-		const authProps = {
-			pathName: '/auth',
-			backCase: this.backCase,
-			defaultCase: defaultCase
-		}
 		if(defaultCase === 1) {
 			return(
 				<BrowserRouter>
 					<div className='Routes'>
-						<TopNavigation />
+						<TopNavigation 
+							authCase={this.authCase}
+						/>
 						<SideNavigation
 							colorNavbar={colorNavbar} 
 							authCase={this.authCase}
@@ -106,14 +98,14 @@ class Routes extends React.Component{
 								<Route path='/tablebootstrap' component={TableBootstrap} />
 								<Route path='/formbootstrap' component={BootstrapForm} />
 								<Route path='/charts' component={Charts} />
-								<Route path='/updateprofile' component={UpdateProfile} />
 								//Sample Page
 								<Route path='/reduxcrud' component={ReduxCrud} />
 								<Route path='/firebasecrud' component={FirebaseCrud} />
 								<Route path='/griddletable' component={GriddleTable} />
 								
-								<Route path='/settingview' component={SettingView}/>
-								<Route path={authProps} component={Auth} />
+								//How To Send Props in Route Method (React router dom)
+								<Route path='/SettingView' render={(routeProps) => (<SettingView {...routeProps} backCase={this.backCase}/> )}/>
+								<Route path='/updateprofile' render={(routeProps) => (<UpdateProfile {...routeProps} backCase={this.backCase}/> )}/>
 							</Switch>
 						</div>
 					</div>
@@ -125,7 +117,7 @@ class Routes extends React.Component{
 					<div className='Routes'>
 						<div className='ContentAuth'>
 							<Switch>
-								<Route path={authProps} component={Auth} />
+								<Route path='/auth' render={(routeProps) => (<Auth {...routeProps} backCase={this.backCase}/> )}/>
 							</Switch>
 						</div>
 					</div>
