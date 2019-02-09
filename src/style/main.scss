@@ -135,12 +135,14 @@ html{
 						height: 100vh;
 						left: 60px;
 						transition: all .3s;
-						ul{
+						.Main_Title{
+							margin-bottom: 40px;
 							.Main_Title_Row_2{
-								padding: 20px;
+								height: 60px;
 								text-align: center;
 								font-size: 25px;
 								color: #fdfdfd;
+								line-height: 60px;
 							}
 						}
 						.Menu{
@@ -151,13 +153,16 @@ html{
 								transition: all .3s;
 								.Dropdown{
 									li{
+										height: 40px;
 										position: relative;
 										color: #fdfdfd;
-										padding: 10px 20px 10px 20px;
+										padding-left: 20px;
+										line-height: 40px;
 										cursor: pointer;
 										transition: all .2s;
 										&:hover{
 											opacity: .5;
+											background-color: salmon;
 										}
 										&.active{
 											
@@ -170,6 +175,7 @@ html{
 										.Dropdown-Icon{
 											position: absolute;
 											right: 10px;
+											top: 10px;
 											transition: all .3s;
 											&.active{
 												transform: rotate(90deg);
@@ -190,6 +196,8 @@ html{
 												li{
 													padding-left: 30px;
 													transition: all .2s;
+													height: 40px;
+													line-height: 40px;
 													&:hover{
 														
 													}
@@ -341,6 +349,7 @@ html{
 								.col-lg-6:nth-child(1){
 									.card{
 										.card-body{
+											padding: 20px;
 											cursor: pointer;
 											background-color: #487eb0;
 											box-shadow: 0px 0px 2px 1px rgba(0,0,0,.2);
@@ -415,12 +424,13 @@ html{
 								.col-lg-12{
 									nav{
 										ol{
-											height: 50px;
 											border-radius: 0;
 											background-color: #f5f6fa;
 											box-shadow: 0px 0px 1px rgba(0,0,0,.2);
 											li{
 												font-size: 17px;
+												height: 30px;
+												line-height: 30px;
 											}
 										}
 									}
@@ -433,6 +443,16 @@ html{
 											border: none;
 											font-size: 17px;
 											color: #2f3640;
+											height: 40px;
+											line-height: 20px;
+											span{
+												cursor: pointer;
+												position: absolute;
+												right: 10px;
+												svg{
+
+												}
+											}
 										}
 										.card-body{
 
@@ -448,12 +468,13 @@ html{
 								.col-lg-12{
 									nav{
 										ol{
-											height: 50px;
 											border-radius: 0;
 											background-color: #f5f6fa;
 											box-shadow: 0px 0px 1px rgba(0,0,0,.2);
 											li{
 												font-size: 17px;
+												height: 30px;
+												line-height: 30px;
 											}
 										}
 									}
@@ -466,6 +487,16 @@ html{
 											border: none;
 											font-size: 17px;
 											color: #2f3640;
+											height: 40px;
+											line-height: 20px;
+											span{
+												cursor: pointer;
+												position: absolute;
+												right: 10px;
+												svg{
+
+												}
+											}
 										}
 										.card-body{
 
@@ -479,15 +510,14 @@ html{
 						.container-fluid{
 							.row{
 								.col-lg-12{
-									nav{
-										ol{
-											height: 50px;
-											border-radius: 0;
-											background-color: #f5f6fa;
-											box-shadow: 0px 0px 1px rgba(0,0,0,.2);
-											li{
-												font-size: 17px;
-											}
+									ol{
+										border-radius: 0;
+										background-color: #f5f6fa;
+										box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+										li{
+											font-size: 17px;
+											height: 30px;
+											line-height: 30px;
 										}
 									}
 								}
@@ -499,6 +529,148 @@ html{
 											border: none;
 											font-size: 17px;
 											color: #2f3640;
+											height: 40px;
+											line-height: 20px;
+											span{
+												cursor: pointer;
+												position: absolute;
+												right: 10px;
+												svg{
+
+												}
+											}
+										}
+										.card-body{
+
+										}
+									}
+								}
+							}
+						}
+					}
+					.ReduxCrud{
+						.container-fluid{
+							.row{
+								.col-lg-12:nth-child(1){
+									ol{
+										border-radius: 0;
+										background-color: #f5f6fa;
+										box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+										li{
+											font-size: 17px;
+											height: 30px;
+											line-height: 30px;
+										}
+									}
+								}
+								.col-lg-12:nth-child(2){
+									.card{
+										border-top: 2px solid #c7ecee;
+										.card-header{
+											background-color: #f5f6fa;
+											border: none;
+											font-size: 17px;
+											color: #2f3640;
+											height: 40px;
+											line-height: 20px;
+											span{
+												cursor: pointer;
+												position: absolute;
+												right: 10px;
+												svg{
+
+												}
+											}
+										}
+										.card-body{
+
+										}
+									}
+								}
+								.col-lg-12:nth-child(3){
+									.card{
+										border-top: 2px solid #c7ecee;
+										.card-header{
+											background-color: #f5f6fa;
+											border: none;
+											font-size: 17px;
+											color: #2f3640;
+											height: 40px;
+											line-height: 20px;
+											span{
+												cursor: pointer;
+												position: absolute;
+												right: 10px;
+												svg{
+
+												}
+											}
+										}
+										.card-body{
+
+										}
+									}
+								}
+							}
+						}
+					}
+					.FirebaseCrud{
+						.container-fluid{
+							.row{
+								.col-lg-12:nth-child(1){
+									ol{
+										border-radius: 0;
+										background-color: #f5f6fa;
+										box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+										li{
+											font-size: 17px;
+											height: 30px;
+											line-height: 30px;
+										}
+									}
+								}
+								.col-lg-12:nth-child(2){
+									.card{
+										border-top: 2px solid #c7ecee;
+										.card-header{
+											background-color: #f5f6fa;
+											border: none;
+											font-size: 17px;
+											color: #2f3640;
+											height: 40px;
+											line-height: 20px;
+											span{
+												cursor: pointer;
+												position: absolute;
+												right: 10px;
+												svg{
+
+												}
+											}
+										}
+										.card-body{
+
+										}
+									}
+								}
+								.col-lg-12:nth-child(3){
+									.card{
+										border-top: 2px solid #c7ecee;
+										.card-header{
+											background-color: #f5f6fa;
+											border: none;
+											font-size: 17px;
+											color: #2f3640;
+											height: 40px;
+											line-height: 20px;
+											span{
+												cursor: pointer;
+												position: absolute;
+												right: 10px;
+												svg{
+
+												}
+											}
 										}
 										.card-body{
 
@@ -600,12 +772,13 @@ html{
 								.col-lg-12{
 									nav{
 										ol{
-											height: 50px;
 											border-radius: 0;
 											background-color: #f5f6fa;
 											box-shadow: 0px 0px 1px rgba(0,0,0,.2);
 											li{
 												font-size: 17px;
+												height: 30px;
+												line-height: 30px;
 											}
 										}
 									}
@@ -708,9 +881,10 @@ html{
 												.card-text{
 													color: #1e3799;
 													text-align: center;
-													font-size: 25px;
+													font-size: 15px;
 												}
 												form{
+													margin-top: 40px;
 													.form-group{
 														position: relative;
 														margin-bottom: 30px;
@@ -720,7 +894,7 @@ html{
 															border: none;
 															border-bottom: 2px solid #1e3799;
 															transition: all .3s;
-															padding-left: 30px;
+															padding-left: 33px;
 															&:focus{
 																box-shadow: none;
 																border-bottom: 2px solid #353b48;
@@ -738,20 +912,19 @@ html{
 														}
 														.iconForm{
 															position: absolute;
-															top: 12px;
+															top: 15px;
 															left: 10px;
 															transition: all .3s;
 															font-size: 17px;
 														}
 														.iconPassword{
 															position: absolute;
-															top: 10px;
+															top: 15px;
 															right: 10px;
 															font-size: 20px;
 															cursor: pointer;
 														}
 														button{
-															
 															border: none;
 															border-radius: 10px;
 															box-shadow: none;
@@ -776,7 +949,7 @@ html{
 												.card-text{
 													color: #1e3799;
 													text-align: center;
-													font-size: 25px;
+													font-size: 15px;
 												}
 												form{
 													.form-group{
@@ -818,9 +991,8 @@ html{
 															cursor: pointer;
 														}
 														button{
-															height: 50px;
 															border: none;
-															border-radius: 0;
+															border-radius: 10px;
 															box-shadow: none;
 															background-color: #1e3799;
 															transition: all .2s;

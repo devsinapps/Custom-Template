@@ -5,11 +5,13 @@ import { inputEmployee, deleteEmployee, updateEmployee } from './../../../../sto
 //Component
 import FirebaseTable from './FirebaseTable'
 import FirebaseForm from './FirebaseForm'
+//Container
+import Dropdown_Col_12 from './../../../container/Dropdown_Col_12'
 //Tools
 import { connect } from 'react-redux'
 import { compose } from 'redux'
 import { firestoreConnect } from 'react-redux-firebase'
-import { Container, Row, Col, Card, CardBody } from 'reactstrap'
+import { Container, Row, Col, Card, CardBody, Breadcrumb, BreadcrumbItem } from 'reactstrap'
 class FirebaseCrud extends React.Component{
 	state = {
 		id: '',
@@ -73,7 +75,6 @@ class FirebaseCrud extends React.Component{
 		
 	}
 	render(){
-		console.log(this.state)
 		const { employees, countryState } = this.props
 		const { firstName, lastName, gender, age, country, city, address, education } = this.state
 		const value = { firstName, lastName, gender, age, country, city, address, education }
@@ -83,25 +84,26 @@ class FirebaseCrud extends React.Component{
 					<Container fluid>
 						<Row>
 							<Col lg='12'>
+								<Breadcrumb> 
+									<BreadcrumbItem active> Crud Firebase </BreadcrumbItem>
+								</Breadcrumb>
+							</Col>
+							<Dropdown_Col_12 title='Data Table'>
 								<FirebaseTable
 									employees={employees} 
 									getDataRow={this.getDataRow}
 								/>
-							</Col>
-							<Col lg='7' className='mx-auto'>
-								<Card>
-									<CardBody>
-										<FirebaseForm
-											countryState={countryState}
-											value={value}
-											onChange={this.onChange}
-											inputEmployee={this.inputEmployee}
-											deleteEmployee={this.deleteEmployee}
-											updateEmployee={this.updateEmployee}
-										/>
-									</CardBody>
-								</Card>
-							</Col>
+							</Dropdown_Col_12>
+							<Dropdown_Col_12 title='Data Table'>
+								<FirebaseForm
+									countryState={countryState}
+									value={value}
+									onChange={this.onChange}
+									inputEmployee={this.inputEmployee}
+									deleteEmployee={this.deleteEmployee}
+									updateEmployee={this.updateEmployee}
+								/>
+							</Dropdown_Col_12>
 						</Row>
 					</Container>
 				</div>

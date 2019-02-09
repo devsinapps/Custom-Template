@@ -152,11 +152,14 @@ html body {
       height: 100vh;
       left: 60px;
       transition: all .3s; }
-      html body #root .Routes .SideNavigation .Row-2 ul .Main_Title_Row_2 {
-        padding: 20px;
-        text-align: center;
-        font-size: 25px;
-        color: #fdfdfd; }
+      html body #root .Routes .SideNavigation .Row-2 .Main_Title {
+        margin-bottom: 40px; }
+        html body #root .Routes .SideNavigation .Row-2 .Main_Title .Main_Title_Row_2 {
+          height: 60px;
+          text-align: center;
+          font-size: 25px;
+          color: #fdfdfd;
+          line-height: 60px; }
       html body #root .Routes .SideNavigation .Row-2 .Menu {
         max-height: 350px;
         overflow: hidden;
@@ -164,19 +167,23 @@ html body {
         html body #root .Routes .SideNavigation .Row-2 .Menu ul {
           transition: all .3s; }
           html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li {
+            height: 40px;
             position: relative;
             color: #fdfdfd;
-            padding: 10px 20px 10px 20px;
+            padding-left: 20px;
+            line-height: 40px;
             cursor: pointer;
             transition: all .2s; }
             html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li:hover {
-              opacity: .5; }
+              opacity: .5;
+              background-color: salmon; }
             html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li.active {
               border-top: 2px solid #38ada9;
               border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
             html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li .Dropdown-Icon {
               position: absolute;
               right: 10px;
+              top: 10px;
               transition: all .3s; }
               html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li .Dropdown-Icon.active {
                 transform: rotate(90deg); }
@@ -191,7 +198,9 @@ html body {
                 margin-right: 10px; }
               html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul li {
                 padding-left: 30px;
-                transition: all .2s; }
+                transition: all .2s;
+                height: 40px;
+                line-height: 40px; }
                 html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul li a {
                   color: #fdfdfd;
                   outline: none;
@@ -289,6 +298,7 @@ html body {
           html body #root .Routes .Content .authAlertCard .container .row .col-lg-4 .card .card-body a {
             font-size: 17px; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body {
+      padding: 20px;
       cursor: pointer;
       background-color: #487eb0;
       box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
@@ -329,47 +339,136 @@ html body {
         font-size: 17px;
         color: #f5f6fa; }
     html body #root .Routes .Content .Charts .container-fluid .row .col-lg-12 nav ol {
-      height: 50px;
       border-radius: 0;
       background-color: #f5f6fa;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
       html body #root .Routes .Content .Charts .container-fluid .row .col-lg-12 nav ol li {
-        font-size: 17px; }
+        font-size: 17px;
+        height: 30px;
+        line-height: 30px; }
     html body #root .Routes .Content .Charts .container-fluid .row .col-lg-6 .card {
       border-top: 2px solid #c7ecee; }
       html body #root .Routes .Content .Charts .container-fluid .row .col-lg-6 .card .card-header {
         background-color: #f5f6fa;
         border: none;
         font-size: 17px;
-        color: #2f3640; }
+        color: #2f3640;
+        height: 40px;
+        line-height: 20px; }
+        html body #root .Routes .Content .Charts .container-fluid .row .col-lg-6 .card .card-header span {
+          cursor: pointer;
+          position: absolute;
+          right: 10px; }
     html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-12 nav ol {
-      height: 50px;
       border-radius: 0;
       background-color: #f5f6fa;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
       html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-12 nav ol li {
-        font-size: 17px; }
+        font-size: 17px;
+        height: 30px;
+        line-height: 30px; }
     html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-6 .card {
       border-top: 2px solid #c7ecee; }
       html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-6 .card .card-header {
         background-color: #f5f6fa;
         border: none;
         font-size: 17px;
-        color: #2f3640; }
-    html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-12 nav ol {
-      height: 50px;
+        color: #2f3640;
+        height: 40px;
+        line-height: 20px; }
+        html body #root .Routes .Content .BootstrapForm .container-fluid .row .col-lg-6 .card .card-header span {
+          cursor: pointer;
+          position: absolute;
+          right: 10px; }
+    html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-12 ol {
       border-radius: 0;
       background-color: #f5f6fa;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
-      html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-12 nav ol li {
-        font-size: 17px; }
+      html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-12 ol li {
+        font-size: 17px;
+        height: 30px;
+        line-height: 30px; }
     html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-6 .card {
       border-top: 2px solid #c7ecee; }
       html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-6 .card .card-header {
         background-color: #f5f6fa;
         border: none;
         font-size: 17px;
-        color: #2f3640; }
+        color: #2f3640;
+        height: 40px;
+        line-height: 20px; }
+        html body #root .Routes .Content .TableBootstrap .container-fluid .row .col-lg-6 .card .card-header span {
+          cursor: pointer;
+          position: absolute;
+          right: 10px; }
+    html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(1) ol {
+      border-radius: 0;
+      background-color: #f5f6fa;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(1) ol li {
+        font-size: 17px;
+        height: 30px;
+        line-height: 30px; }
+    html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(2) .card {
+      border-top: 2px solid #c7ecee; }
+      html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(2) .card .card-header {
+        background-color: #f5f6fa;
+        border: none;
+        font-size: 17px;
+        color: #2f3640;
+        height: 40px;
+        line-height: 20px; }
+        html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(2) .card .card-header span {
+          cursor: pointer;
+          position: absolute;
+          right: 10px; }
+    html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(3) .card {
+      border-top: 2px solid #c7ecee; }
+      html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(3) .card .card-header {
+        background-color: #f5f6fa;
+        border: none;
+        font-size: 17px;
+        color: #2f3640;
+        height: 40px;
+        line-height: 20px; }
+        html body #root .Routes .Content .ReduxCrud .container-fluid .row .col-lg-12:nth-child(3) .card .card-header span {
+          cursor: pointer;
+          position: absolute;
+          right: 10px; }
+    html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(1) ol {
+      border-radius: 0;
+      background-color: #f5f6fa;
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
+      html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(1) ol li {
+        font-size: 17px;
+        height: 30px;
+        line-height: 30px; }
+    html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(2) .card {
+      border-top: 2px solid #c7ecee; }
+      html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(2) .card .card-header {
+        background-color: #f5f6fa;
+        border: none;
+        font-size: 17px;
+        color: #2f3640;
+        height: 40px;
+        line-height: 20px; }
+        html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(2) .card .card-header span {
+          cursor: pointer;
+          position: absolute;
+          right: 10px; }
+    html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(3) .card {
+      border-top: 2px solid #c7ecee; }
+      html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(3) .card .card-header {
+        background-color: #f5f6fa;
+        border: none;
+        font-size: 17px;
+        color: #2f3640;
+        height: 40px;
+        line-height: 20px; }
+        html body #root .Routes .Content .FirebaseCrud .container-fluid .row .col-lg-12:nth-child(3) .card .card-header span {
+          cursor: pointer;
+          position: absolute;
+          right: 10px; }
     html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card {
       border-radius: 0;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.4); }
@@ -406,12 +505,13 @@ html body {
         html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-8 .card .card-body form .form-group button:active {
           background-color: #d9b00d; }
     html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 nav ol {
-      height: 50px;
       border-radius: 0;
       background-color: #f5f6fa;
       box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2); }
       html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 nav ol li {
-        font-size: 17px; }
+        font-size: 17px;
+        height: 30px;
+        line-height: 30px; }
     html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 .card {
       border: none; }
       html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 .card .card-body button {
@@ -456,50 +556,52 @@ html body {
       html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn .card-text {
         color: #1e3799;
         text-align: center;
-        font-size: 25px; }
-      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group {
-        position: relative;
-        margin-bottom: 30px; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input {
-          height: 50px;
-          border-radius: 0;
-          border: none;
-          border-bottom: 2px solid #1e3799;
-          transition: all .3s;
-          padding-left: 30px; }
-          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus {
+        font-size: 15px; }
+      html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form {
+        margin-top: 40px; }
+        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group {
+          position: relative;
+          margin-bottom: 30px; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input {
+            height: 50px;
+            border-radius: 0;
+            border: none;
+            border-bottom: 2px solid #1e3799;
+            transition: all .3s;
+            padding-left: 33px; }
+            html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus {
+              box-shadow: none;
+              border-bottom: 2px solid #353b48; }
+            html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus ~ .iconForm {
+              top: -10px;
+              left: 10px;
+              font-size: 14px; }
+            html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:not(:focus):valid ~ .iconForm {
+              top: -10px;
+              left: 10px;
+              font-size: 14px; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .iconForm {
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            transition: all .3s;
+            font-size: 17px; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .iconPassword {
+            position: absolute;
+            top: 15px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer; }
+          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button {
+            border: none;
+            border-radius: 10px;
             box-shadow: none;
-            border-bottom: 2px solid #353b48; }
-          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:focus ~ .iconForm {
-            top: -10px;
-            left: 10px;
-            font-size: 14px; }
-          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group input:not(:focus):valid ~ .iconForm {
-            top: -10px;
-            left: 10px;
-            font-size: 14px; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .iconForm {
-          position: absolute;
-          top: 12px;
-          left: 10px;
-          transition: all .3s;
-          font-size: 17px; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group .iconPassword {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          font-size: 20px;
-          cursor: pointer; }
-        html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button {
-          border: none;
-          border-radius: 10px;
-          box-shadow: none;
-          background-color: #1e3799;
-          transition: all .2s; }
-          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button:hover {
-            background-color: #2645c0; }
-          html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button:active {
-            background-color: #192e80; }
+            background-color: #1e3799;
+            transition: all .2s; }
+            html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button:hover {
+              background-color: #2645c0; }
+            html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignIn form .form-group button:active {
+              background-color: #192e80; }
       html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp .card-title {
         color: #1e3799;
         text-align: center;
@@ -507,7 +609,7 @@ html body {
       html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp .card-text {
         color: #1e3799;
         text-align: center;
-        font-size: 25px; }
+        font-size: 15px; }
       html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group {
         position: relative;
         margin-bottom: 30px; }
@@ -541,9 +643,8 @@ html body {
           font-size: 20px;
           cursor: pointer; }
         html body #root .Routes .ContentAuth .Auth .container-fluid .row .col-lg-5 .card .card-body .SignUp form .form-group button {
-          height: 50px;
           border: none;
-          border-radius: 0;
+          border-radius: 10px;
           box-shadow: none;
           background-color: #1e3799;
           transition: all .2s; }

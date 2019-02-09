@@ -56,7 +56,7 @@ class SideNavigation extends Component{
 					</ul>
 				</div>
 				<div className='Row-2' style={{backgroundColor: colorNavbar}}>
-					<ul>
+					<ul className='Main_Title'>
 						<li className='Main_Title_Row_2'> List Menu </li>
 					</ul>
 					<div className='Menu'>

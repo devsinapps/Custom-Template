@@ -6,9 +6,11 @@ import { updateData } from './../../../../store/actions/reduxCrudActions'
 //Component
 import ReduxTable from './ReduxTable'
 import ReduxForm from './ReduxForm'
+//Container
+import Dropdown_Col_12 from './../../../container/Dropdown_Col_12'
 //Tools
 import { connect } from 'react-redux'
-import { Container, Row, Col, Card, CardBody, Breadcrumb, BreadcrumbItem } from 'reactstrap'
+import { Container, Row, Col, Card, CardBody, Breadcrumb, BreadcrumbItem, CardHeader } from 'reactstrap'
 class ReduxCrud extends React.Component{
 	state = {
 		id: '',
@@ -87,31 +89,21 @@ class ReduxCrud extends React.Component{
 								<BreadcrumbItem active> Crud Single Page </BreadcrumbItem>
 							</Breadcrumb>
 						</Col>
-						<Col lg='12'>
+						<Dropdown_Col_12 title='Data Table'>
 							<ReduxTable 
 								reduxTable={reduxTable}
 								getDataRow={this.getDataRow}
 							/>
-						</Col>
-						<Col lg='12'>
-							<Breadcrumb> 
-								<BreadcrumbItem active> Form Actions </BreadcrumbItem>
-							</Breadcrumb>
-						</Col>
-						<Col lg='8' className='mx-auto'>
-							<Card className='mb-3'>
-								<CardBody>
-									<ReduxForm 
-										value={value}
-										onChange={this.onChange}
-										onSubmit={this.onSubmit}
-										deleteData={this.deleteData}
-										updateData={this.updateData}
-									/>
-								</CardBody>
-							</Card>
-						</Col>
-						
+						</Dropdown_Col_12>
+						<Dropdown_Col_12 title='Form'>
+							<ReduxForm 
+								value={value}
+								onChange={this.onChange}
+								onSubmit={this.onSubmit}
+								deleteData={this.deleteData}
+								updateData={this.updateData}
+							/>
+						</Dropdown_Col_12>
 					</Row>
 				</Container>
 			</div>

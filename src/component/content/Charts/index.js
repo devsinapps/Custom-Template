@@ -1,5 +1,9 @@
 import React from 'react'
 import Loading from './../../../assets/images/Loading.png'
+//Container
+import Dropdown_Col_6 from './../../container/Dropdown_Col_6'
+//Style
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { BarChart, LineChart, DoghnutChart, HorizontalChart } from './ChartsSummary'
 import { Container, Row, Col, Card, CardBody, CardHeader, Breadcrumb, BreadcrumbItem } from 'reactstrap'
 class Charts extends React.Component{
@@ -26,18 +30,18 @@ class Charts extends React.Component{
 									<BreadcrumbItem active> Chart </BreadcrumbItem>
 								</Breadcrumb>
 							</Col>
-							<Summary title='Bar Chart'>
+							<Dropdown_Col_6 title='Bar Chart'>
 								<BarChart />
-							</Summary>
-							<Summary title='Line Chart'>
+							</Dropdown_Col_6>
+							<Dropdown_Col_6 title='Line Chart'>
 								<LineChart />
-							</Summary>
-							<Summary title='Dough Chart'>
+							</Dropdown_Col_6>
+							<Dropdown_Col_6 title='Dough Chart'>
 								<DoghnutChart />
-							</Summary>
-							<Summary title='Horizontal Chart'>
+							</Dropdown_Col_6>
+							<Dropdown_Col_6 title='Horizontal Chart'>
 								<HorizontalChart />
-							</Summary>
+							</Dropdown_Col_6>
 						</Row>
 					</Container>
 				</div>
@@ -55,19 +59,4 @@ class Charts extends React.Component{
 
 export default Charts
 
-class Summary extends React.Component{
-	render(){
-		const { title, children } = this.props
-		return(
-			<Col lg='6' md='6'>
-				<Card className='mb-3'>
-					<CardHeader> {title} </CardHeader>
-					<CardBody>
-						{children}
-					</CardBody>
-				</Card>
-			</Col>
-		)
-	}
-}
 

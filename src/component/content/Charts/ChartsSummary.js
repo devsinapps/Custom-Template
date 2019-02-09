@@ -37,12 +37,10 @@ export class BarChart extends React.Component {
   }
   render() {
     return (
-      <div>
-        <canvas
-          style={{ width: 800, height: 450 }}
-          ref={node => (this.node = node)}
-        />
-      </div>
+     <canvas
+        style={{ width: 800, height: 450 }}
+        ref={node => (this.node = node)}
+      />
     );
   }
 }
@@ -96,12 +94,10 @@ export class LineChart extends React.Component{
 	  }
 	render() {
 	    return (
-	      <div>
-	        <canvas
-	          style={{ width: 800, height: 450 }}
-	          ref={node => (this.node = node)}
-	        />
-	      </div>
+	      <canvas
+	        style={{ width: 800, height: 450 }}
+	        ref={node => (this.node = node)}
+	      />
 	    );
     }
 }
@@ -136,12 +132,10 @@ export class DoghnutChart extends React.Component{
 	  }
 	render() {
 	    return (
-	      <div>
-	        <canvas
-	          style={{ width: 800, height: 450 }}
-	          ref={node => (this.node = node)}
-	        />
-	      </div>
+	      <canvas
+	        style={{ width: 800, height: 450 }}
+	        ref={node => (this.node = node)}
+	      />
 	    );
   	}
 }
@@ -177,12 +171,10 @@ export class HorizontalChart extends React.Component{
 	  }
 	  render() {
 	    return (
-	      <div>
-	        <canvas
-	          style={{ width: 800, height: 450 }}
-	          ref={node => (this.node = node)}
-	        />
-	      </div>
+	      <canvas
+	        style={{ width: 800, height: 450 }}
+	        ref={node => (this.node = node)}
+	      />
 	    );
   	}
 }
