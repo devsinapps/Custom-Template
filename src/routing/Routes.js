@@ -22,10 +22,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 //Style
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCandyCane, faEnvelope, faPhone, faLeaf, faUserCircle, faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faPenNib, faAmericanSignLanguageInterpreting, faAsterisk, faCandyCane, faEnvelope, faPhone, faLeaf, faUserCircle, faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';  
 
-library.add( faCandyCane, faEnvelope, faPhone, faLeaf, faUserCircle, faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight,  faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram)
+library.add( faPenNib, faAmericanSignLanguageInterpreting, faAsterisk, faCandyCane, faEnvelope, faPhone, faLeaf, faUserCircle, faAt, faLock, faEye, faEyeSlash, faUserAstronaut, faSearch, faBars,faAward, faCalendarPlus,faAngleLeft, faTachometerAlt, faChartPie, faFileAlt, faTable, faCogs, faSignInAlt, faSignOutAlt, faAngleRight,  faGithubAlt, faGithub, faGoogle,  faFacebook,  faTwitter, faInstagram)
 class Routes extends React.Component{
 	state = {
 		isExpanded: false,

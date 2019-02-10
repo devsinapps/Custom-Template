@@ -321,55 +321,30 @@ html body {
             font-size: 20px; }
           html body #root .Routes .Content .authAlertCard .container .row .col-lg-4 .card .card-body a {
             font-size: 17px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body {
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body {
+      position: relative;
       padding: 20px;
       cursor: pointer;
-      background-color: #487eb0;
-      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-title {
+      background-color: #ffffff;
+      transition: all .3s;
+      border-top: 2px solid #81ecec; }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body:hover {
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body .card-title {
         font-size: 30px;
-        color: #f5f6fa;
+        color: #81ecec;
         margin-bottom: 10px; }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-text {
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body .card-text {
         font-size: 17px;
-        color: #f5f6fa;
+        color: #81ecec;
         padding: 5px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body {
-      cursor: pointer;
-      background-color: #0097e6;
-      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-title {
-        font-size: 30px;
-        color: #f5f6fa;
-        margin-bottom: 10px; }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-text {
-        font-size: 17px;
-        color: #f5f6fa;
-        padding: 5px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body {
-      cursor: pointer;
-      background-color: #273c75;
-      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-title {
-        font-size: 30px;
-        color: #f5f6fa;
-        margin-bottom: 10px; }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-text {
-        font-size: 17px;
-        color: #f5f6fa;
-        padding: 5px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body {
-      cursor: pointer;
-      background-color: #c23616;
-      box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-title {
-        font-size: 30px;
-        color: #f5f6fa;
-        margin-bottom: 10px; }
-      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-text {
-        font-size: 17px;
-        color: #f5f6fa;
-        padding: 5px; }
+      html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body svg {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        font-size: 50px;
+        color: #dcdde1;
+        z-index: 1; }
     html body #root .Routes .Content .Charts .container-fluid .row .col-lg-12 nav ol {
       border-radius: 0;
       background-color: #f5f6fa;
@@ -722,26 +697,59 @@ html body {
       left: 95px; }
     html body #root .Routes .Content .Btn-Slider-Toggle {
       left: 235px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-title {
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body .card-title {
       font-size: 20px;
       font-weight: bold; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-text {
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body .card-text {
       font-size: 15px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-title {
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body svg {
+      font-size: 30px; }
+    html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 .card {
+      border: none; }
+  html body #root .Routes .ContentSlider {
+    left: 250px;
+    opacity: .3; }
+    html body #root .Routes .ContentSlider .Btn-Slider {
+      opacity: 1; } }
+
+@media screen and (max-width: 400px) {
+  html body #root .Routes .TopNavigation {
+    left: 110px; }
+    html body #root .Routes .TopNavigation .Menu {
+      position: relative; }
+      html body #root .Routes .TopNavigation .Menu .Developt_Title {
+        display: none; }
+      html body #root .Routes .TopNavigation .Menu .Profile_Title .card-title {
+        display: none; }
+  html body #root .Routes .TopNavigation-Toogle {
+    left: 250px; }
+  html body #root .Routes .SideNavigation .Row-2 .Main_Title .Main_Title_Row_2 {
+    opacity: 0; }
+  html body #root .Routes .SideNavigation .Row-2 .Menu ul {
+    opacity: 0; }
+  html body #root .Routes .SideNavigation .Row-2-Toggle .Main_Title .Main_Title_Row_2 {
+    opacity: 1;
+    line-height: 60px; }
+  html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul {
+    opacity: 1; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul .Dropdown li {
+      line-height: 40px; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul .Dropdown .Dropdown_Menu .Menu ul li {
+      line-height: 40px; }
+  html body #root .Routes .Content {
+    left: 110px; }
+    html body #root .Routes .Content .Btn-Slider {
+      left: 95px; }
+    html body #root .Routes .Content .Btn-Slider-Toggle {
+      left: 235px; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body .card-title {
       font-size: 20px;
       font-weight: bold; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-text {
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body .card-text {
       font-size: 15px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-title {
-      font-size: 20px;
-      font-weight: bold; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-text {
-      font-size: 15px; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-title {
-      font-size: 20px;
-      font-weight: bold; }
-    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-text {
-      font-size: 15px; }
+    html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6 .card .card-body svg {
+      font-size: 30px;
+      display: none; }
     html body #root .Routes .Content .SettingView .container-fluid .row:nth-child(1) .col-lg-12 .card {
       border: none; }
   html body #root .Routes .ContentSlider {

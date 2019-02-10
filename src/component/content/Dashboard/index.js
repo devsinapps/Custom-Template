@@ -1,6 +1,7 @@
 import React from 'react'
 import Loading from './../../../assets/images/Loading.png'
 import { connect } from 'react-redux'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Container, Row, Col, Card, CardBody, CardTitle, CardText } from 'reactstrap'
 class Dashboard extends React.Component{
 	state = {
@@ -24,10 +25,12 @@ class Dashboard extends React.Component{
 							<Col lg='6'>
 								<Card className='mb-3'>
 									<CardBody>
-										<CardTitle> Easy tos Use </CardTitle>
+										<CardTitle> Easy to Use </CardTitle>
 										<CardText>
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Minimalist Design, So User can easily to use the Menu
+											
 										</CardText>
+										<FontAwesomeIcon icon='pen-nib' />
 									</CardBody>
 								</Card>
 							</Col>
@@ -36,8 +39,10 @@ class Dashboard extends React.Component{
 									<CardBody>
 										<CardTitle> Responsive Design </CardTitle>
 										<CardText>
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Dinamic View
+											
 										</CardText>
+										<FontAwesomeIcon icon='asterisk' />
 									</CardBody>
 								</Card>
 							</Col>
@@ -46,8 +51,10 @@ class Dashboard extends React.Component{
 									<CardBody>
 										<CardTitle> Customize View </CardTitle>
 										<CardText>
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											User can change view, if the bored with default color
+											
 										</CardText>
+										<FontAwesomeIcon icon='cogs' />
 									</CardBody>
 								</Card>
 							</Col>
@@ -56,8 +63,10 @@ class Dashboard extends React.Component{
 									<CardBody>
 										<CardTitle> Feature Update  </CardTitle>
 										<CardText>
-										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+											Update every week, New Menu And New Sample 
+
 										</CardText>
+										<FontAwesomeIcon icon='american-sign-language-interpreting' />
 									</CardBody>
 								</Card>
 							</Col>
