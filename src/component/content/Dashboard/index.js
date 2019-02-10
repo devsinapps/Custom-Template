@@ -24,7 +24,7 @@ class Dashboard extends React.Component{
 							<Col lg='6'>
 								<Card className='mb-3'>
 									<CardBody>
-										<CardTitle> Easy to Use </CardTitle>
+										<CardTitle> Easy tos Use </CardTitle>
 										<CardText>
 										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 										</CardText>

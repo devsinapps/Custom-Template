@@ -71,7 +71,6 @@ class Routes extends React.Component{
 	}
 
 	render(){
-		console.log(this.state)
 		const { profile } = this.props
 		const { defaultColor, isExpanded, defaultCase } = this.state
 		const colorNavbar = profile.navColor != null ? profile.navColor : defaultColor
@@ -82,6 +81,7 @@ class Routes extends React.Component{
 					<div className='Routes'>
 						<TopNavigation 
 							authCase={this.authCase}
+							colorNavbar={colorNavbar}
 						/>
 						<SideNavigation
 							colorNavbar={colorNavbar} 

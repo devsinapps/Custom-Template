@@ -1,5 +1,6 @@
 @import './css/cssReset';
 @import url('https://fonts.googleapis.com/css?family=Rubik');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR|Oswald');
 
 html{
 	body{
@@ -17,22 +18,42 @@ html{
 					box-shadow: 0px 0px 2px rgba(0,0,0,.3);
 					z-index: 4;
 					.Menu{
-						position: absolute;
-						right: 10px;
-						.profileToggle{
-							border-radius: 10px;
-							box-shadow: none;	
-							border: none;
-							display: inline-block;
-							background-color: transparent;
-							svg{
-								font-size: 25px;
-								color: #34495e;
+						position: relative;
+						.Developt_Title{
+							position: absolute;
+							left: 5px;
+							top: -15px;
+							height: 30px;
+							width: 150px;
+							box-shadow: 0px 0px 2px rgba(0,0,0,.5);
+							p{
+								text-align: center;
+								font-size: 15px;
+								line-height: 30px;
+								color: #f5f6fa;
 							}
 						}
-						.card-title{
-							display: inline-block;
+						.Profile_Title{
+							position: fixed;
+							right: 10px;
+							top: 10px;
+							.profileToggle{
+								border-radius: 10px;
+								box-shadow: none;	
+								border: none;
+								display: inline-block;
+								background-color: transparent;
+								svg{
+									font-size: 25px;
+									color: #34495e;
+								}
+							}
+							.card-title{
+								display: inline-block;
+								font-family: 'Noto Sans KR', sans-serif;
+							}
 						}
+						
 						.ProfileAuth{
 							position: fixed;
 							top: 60px;
@@ -138,11 +159,13 @@ html{
 						.Main_Title{
 							margin-bottom: 40px;
 							.Main_Title_Row_2{
+								opacity: 1;
 								height: 60px;
 								text-align: center;
 								font-size: 25px;
 								color: #fdfdfd;
 								line-height: 60px;
+								
 							}
 						}
 						.Menu{
@@ -150,6 +173,7 @@ html{
 							overflow: hidden;
 							overflow-y: auto;
 							ul{
+								opacity: 1;
 								transition: all .3s;
 								.Dropdown{
 									li{
@@ -162,7 +186,7 @@ html{
 										transition: all .2s;
 										&:hover{
 											opacity: .5;
-											background-color: salmon;
+											background-color: #95afc0;
 										}
 										&.active{
 											
@@ -219,12 +243,54 @@ html{
 						
 					}
 					.Row-2-Toggle{
-						ul{
-							opacity: 0;
-							li{
-								padding: 10px;
+						.Main_Title{
+							.Main_Title_Row_2{
+								opacity: 0;
+								line-height:60px;
+								&:hover{
+								}
 							}
 						}
+						.Menu{
+							ul{
+								opacity: 0;
+								.Dropdown{
+									li{
+										line-height:40px;
+										&:hover{
+										}
+										&.active{
+										}
+										a{
+
+										}
+										.Dropdown-Icon{
+											&.active{
+											}
+										}
+									}
+									.Dropdown_Menu{
+										.Menu{
+											ul{
+												.Dropdown_Menu_Icon{
+												}
+												li{
+													line-height:20px;
+													&:hover{
+														
+													}
+													a{
+														&:hover{
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						
 					}
 					.Row-1-Result{
 						position: relative;
@@ -356,10 +422,12 @@ html{
 											.card-title{
 												font-size: 30px;
 												color: #f5f6fa;
+												margin-bottom: 10px;
 											}
 											.card-text{
 												font-size: 17px;
 												color: #f5f6fa;
+												padding: 5px;
 											}
 										}
 									}
@@ -373,10 +441,12 @@ html{
 											.card-title{
 												font-size: 30px;
 												color: #f5f6fa;
+												margin-bottom: 10px;
 											}
 											.card-text{
 												font-size: 17px;
 												color: #f5f6fa;
+												padding: 5px;
 											}
 										}
 									}
@@ -390,10 +460,12 @@ html{
 											.card-title{
 												font-size: 30px;
 												color: #f5f6fa;
+												margin-bottom: 10px;
 											}
 											.card-text{
 												font-size: 17px;
 												color: #f5f6fa;
+												padding: 5px;
 											}
 										}
 									}
@@ -407,10 +479,12 @@ html{
 											.card-title{
 												font-size: 30px;
 												color: #f5f6fa;
+												margin-bottom: 10px;
 											}
 											.card-text{
 												font-size: 17px;
 												color: #f5f6fa;
+												padding: 5px;
 											}
 										}
 									}
@@ -697,6 +771,7 @@ html{
 												}
 											}
 											.card-text{
+												height: 30px;
 												font-size: 17px;
 												svg{
 													width: 30px;
@@ -1041,11 +1116,20 @@ html{
 					.TopNavigation{
 						left: 110px;
 						.Menu{
-							.profileToggle{
-								svg{
+							position: relative;
+							.Developt_Title{
+								display: none;
+								p{
 								}
 							}
-							.card-title{
+							.Profile_Title{
+								.profileToggle{
+									svg{
+									}
+								}
+								.card-title{
+									display: none;
+								}
 							}
 							.ProfileAuth{
 								.card{
@@ -1077,12 +1161,9 @@ html{
 					}
 					.TopNavigation-Toogle{
 						left: 250px;
-						right: -250px;
 					}
 					.SideNavigation{
-						position: fixed;
 						.Row-1{
-							position: fixed;
 							ul{
 								li{
 									&:hover{
@@ -1093,10 +1174,11 @@ html{
 							}
 						}
 						.Row-2{
-							position: fixed;
-							ul{
-								opacity: 0;
+							.Main_Title{
 								.Main_Title_Row_2{
+									opacity: 0;
+									&:hover{
+									}
 								}
 							}
 							.Menu{
@@ -1139,13 +1221,50 @@ html{
 							
 						}
 						.Row-2-Toggle{
-							ul{
-								opacity: 1;
+							.Main_Title{
+								.Main_Title_Row_2{
+									opacity: 1;
+									line-height:60px;
+									&:hover{
+									}
+								}
 							}
 							.Menu{
 								ul{
 									opacity: 1;
-									li{
+									.Dropdown{
+										li{
+											line-height:40px;
+											&:hover{
+											}
+											&.active{
+											}
+											a{
+
+											}
+											.Dropdown-Icon{
+												&.active{
+												}
+											}
+										}
+										.Dropdown_Menu{
+											.Menu{
+												ul{
+													.Dropdown_Menu_Icon{
+													}
+													li{
+														line-height:40px;
+														&:hover{
+															
+														}
+														a{
+															&:hover{
+															}
+														}
+													}
+												}
+											}
+										}
 									}
 								}
 							}
@@ -1184,7 +1303,6 @@ html{
 							}
 						}
 						.Btn-Slider-Toggle{
-							
 							left: 235px;
 						}
 						.Loading{
@@ -1454,7 +1572,16 @@ html{
 					}
 					.ContentSlider{
 						left: 250px;
-						right: -250px;
+						opacity: .3;
+						.Btn-Slider{
+							opacity: 1;
+							&:hover{
+							}
+							.Btn-Slider-Icon{
+								&.active{
+								}
+							}
+						}
 					}
 					.ContentAuth{
 						.Auth{

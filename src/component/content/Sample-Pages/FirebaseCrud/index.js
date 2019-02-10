@@ -76,8 +76,8 @@ class FirebaseCrud extends React.Component{
 	}
 	render(){
 		const { employees, countryState } = this.props
-		const { firstName, lastName, gender, age, country, city, address, education } = this.state
-		const value = { firstName, lastName, gender, age, country, city, address, education }
+		const { id, firstName, lastName, gender, age, country, city, address, education } = this.state
+		const value = { id, firstName, lastName, gender, age, country, city, address, education }
 		if(employees){
 			return(
 				<div className='FirebaseCrud'>

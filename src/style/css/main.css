@@ -3,6 +3,7 @@
    License: none (public domain)
 */
 @import url("https://fonts.googleapis.com/css?family=Rubik");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR|Oswald");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -59,19 +60,35 @@ html body {
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
     z-index: 4; }
     html body #root .Routes .TopNavigation .Menu {
-      position: absolute;
-      right: 10px; }
-      html body #root .Routes .TopNavigation .Menu .profileToggle {
-        border-radius: 10px;
-        box-shadow: none;
-        border: none;
-        display: inline-block;
-        background-color: transparent; }
-        html body #root .Routes .TopNavigation .Menu .profileToggle svg {
-          font-size: 25px;
-          color: #34495e; }
-      html body #root .Routes .TopNavigation .Menu .card-title {
-        display: inline-block; }
+      position: relative; }
+      html body #root .Routes .TopNavigation .Menu .Developt_Title {
+        position: absolute;
+        left: 5px;
+        top: -15px;
+        height: 30px;
+        width: 150px;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); }
+        html body #root .Routes .TopNavigation .Menu .Developt_Title p {
+          text-align: center;
+          font-size: 15px;
+          line-height: 30px;
+          color: #f5f6fa; }
+      html body #root .Routes .TopNavigation .Menu .Profile_Title {
+        position: fixed;
+        right: 10px;
+        top: 10px; }
+        html body #root .Routes .TopNavigation .Menu .Profile_Title .profileToggle {
+          border-radius: 10px;
+          box-shadow: none;
+          border: none;
+          display: inline-block;
+          background-color: transparent; }
+          html body #root .Routes .TopNavigation .Menu .Profile_Title .profileToggle svg {
+            font-size: 25px;
+            color: #34495e; }
+        html body #root .Routes .TopNavigation .Menu .Profile_Title .card-title {
+          display: inline-block;
+          font-family: 'Noto Sans KR', sans-serif; }
       html body #root .Routes .TopNavigation .Menu .ProfileAuth {
         position: fixed;
         top: 60px;
@@ -155,6 +172,7 @@ html body {
       html body #root .Routes .SideNavigation .Row-2 .Main_Title {
         margin-bottom: 40px; }
         html body #root .Routes .SideNavigation .Row-2 .Main_Title .Main_Title_Row_2 {
+          opacity: 1;
           height: 60px;
           text-align: center;
           font-size: 25px;
@@ -165,6 +183,7 @@ html body {
         overflow: hidden;
         overflow-y: auto; }
         html body #root .Routes .SideNavigation .Row-2 .Menu ul {
+          opacity: 1;
           transition: all .3s; }
           html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li {
             height: 40px;
@@ -176,7 +195,7 @@ html body {
             transition: all .2s; }
             html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li:hover {
               opacity: .5;
-              background-color: salmon; }
+              background-color: #95afc0; }
             html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown li.active {
               border-top: 2px solid #38ada9;
               border-bottom: 2px dashed rgba(0, 0, 0, 0.2); }
@@ -207,10 +226,15 @@ html body {
                   font-size: 14px; }
                   html body #root .Routes .SideNavigation .Row-2 .Menu ul .Dropdown .Dropdown_Menu .Menu ul li a:hover {
                     text-decoration: none; }
-    html body #root .Routes .SideNavigation .Row-2-Toggle ul {
+    html body #root .Routes .SideNavigation .Row-2-Toggle .Main_Title .Main_Title_Row_2 {
+      opacity: 0;
+      line-height: 60px; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul {
       opacity: 0; }
-      html body #root .Routes .SideNavigation .Row-2-Toggle ul li {
-        padding: 10px; }
+      html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul .Dropdown li {
+        line-height: 40px; }
+      html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul .Dropdown .Dropdown_Menu .Menu ul li {
+        line-height: 20px; }
     html body #root .Routes .SideNavigation .Row-1-Result {
       position: relative; }
       html body #root .Routes .SideNavigation .Row-1-Result .left {
@@ -304,40 +328,48 @@ html body {
       box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-title {
         font-size: 30px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        margin-bottom: 10px; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(1) .card .card-body .card-text {
         font-size: 17px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        padding: 5px; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body {
       cursor: pointer;
       background-color: #0097e6;
       box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-title {
         font-size: 30px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        margin-bottom: 10px; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(2) .card .card-body .card-text {
         font-size: 17px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        padding: 5px; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body {
       cursor: pointer;
       background-color: #273c75;
       box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-title {
         font-size: 30px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        margin-bottom: 10px; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(3) .card .card-body .card-text {
         font-size: 17px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        padding: 5px; }
     html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body {
       cursor: pointer;
       background-color: #c23616;
       box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2); }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-title {
         font-size: 30px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        margin-bottom: 10px; }
       html body #root .Routes .Content .Dashboard .container-fluid .row .col-lg-6:nth-child(4) .card .card-body .card-text {
         font-size: 17px;
-        color: #f5f6fa; }
+        color: #f5f6fa;
+        padding: 5px; }
     html body #root .Routes .Content .Charts .container-fluid .row .col-lg-12 nav ol {
       border-radius: 0;
       background-color: #f5f6fa;
@@ -475,6 +507,7 @@ html body {
       html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-body .text-center .card-title {
         margin-top: 20px; }
       html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-body .card-text {
+        height: 30px;
         font-size: 17px; }
         html body #root .Routes .Content .UpdateProfile .container-fluid .row .col-lg-4 .card .card-body .card-text svg {
           width: 30px;
@@ -662,23 +695,27 @@ html body {
 @media screen and (max-width: 600px) {
   html body #root .Routes .TopNavigation {
     left: 110px; }
+    html body #root .Routes .TopNavigation .Menu {
+      position: relative; }
+      html body #root .Routes .TopNavigation .Menu .Developt_Title {
+        display: none; }
+      html body #root .Routes .TopNavigation .Menu .Profile_Title .card-title {
+        display: none; }
   html body #root .Routes .TopNavigation-Toogle {
-    left: 250px;
-    right: -250px; }
-  html body #root .Routes .SideNavigation {
-    position: fixed; }
-    html body #root .Routes .SideNavigation .Row-1 {
-      position: fixed; }
-    html body #root .Routes .SideNavigation .Row-2 {
-      position: fixed; }
-      html body #root .Routes .SideNavigation .Row-2 ul {
-        opacity: 0; }
-      html body #root .Routes .SideNavigation .Row-2 .Menu ul {
-        opacity: 0; }
-    html body #root .Routes .SideNavigation .Row-2-Toggle ul {
-      opacity: 1; }
-    html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul {
-      opacity: 1; }
+    left: 250px; }
+  html body #root .Routes .SideNavigation .Row-2 .Main_Title .Main_Title_Row_2 {
+    opacity: 0; }
+  html body #root .Routes .SideNavigation .Row-2 .Menu ul {
+    opacity: 0; }
+  html body #root .Routes .SideNavigation .Row-2-Toggle .Main_Title .Main_Title_Row_2 {
+    opacity: 1;
+    line-height: 60px; }
+  html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul {
+    opacity: 1; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul .Dropdown li {
+      line-height: 40px; }
+    html body #root .Routes .SideNavigation .Row-2-Toggle .Menu ul .Dropdown .Dropdown_Menu .Menu ul li {
+      line-height: 40px; }
   html body #root .Routes .Content {
     left: 110px; }
     html body #root .Routes .Content .Btn-Slider {
@@ -709,7 +746,9 @@ html body {
       border: none; }
   html body #root .Routes .ContentSlider {
     left: 250px;
-    right: -250px; } }
+    opacity: .3; }
+    html body #root .Routes .ContentSlider .Btn-Slider {
+      opacity: 1; } }
 
 @keyframes Spinner {
   from {

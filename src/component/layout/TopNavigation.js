@@ -19,7 +19,7 @@ class TopNavigation extends React.Component{
 	}
 	render(){
 		const { isExpanded } = this.state
-		const { auth, profile } = this.props 
+		const { auth, profile, colorNavbar } = this.props 
 		const styleProfileAuth = isExpanded ? 'block' : 'none';
 		const viewProfile = auth.uid != null ? 
 							<div className='viewProfile'>
@@ -42,10 +42,14 @@ class TopNavigation extends React.Component{
 		return(
 			<Navbar className='TopNavigation'>
 				<div className='Menu'>
-					<Button onClick={this.toggle} className='profileToggle'> 
-						<FontAwesomeIcon icon='user-circle' />
-					</Button> 
-					<CardTitle> Custom Template </CardTitle>
+					<div className='Developt_Title' style={{backgroundColor: colorNavbar}}>
+						<p> Development Mode </p>
+					</div>
+					<div className='Profile_Title'>
+						<Button onClick={this.toggle} className='profileToggle'> 
+							<FontAwesomeIcon icon='user-circle' />
+						</Button> 
+					</div>
 					<div className='ProfileAuth' style={{display: styleProfileAuth}}>
 						<Card>
 							<CardBody>
