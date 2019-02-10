@@ -26,11 +26,11 @@ export const inputEmployee = (newEmployee) => {
 	}
 }
 
-export const deleteEmployee = (id) => {
+export const deleteEmployee = (employeeId) => {
 	return(dispatch, getState, {getFirestore})=>{
 		const firestore = getFirestore();
 
-		firestore.collection('employees').doc(id).delete().then(()=>{
+		firestore.collection('employees').doc(employeeId).delete().then(()=>{
 			dispatch({
 				type: "DELETE_EMPLOYEE_SUCCESS"
 			})
@@ -42,7 +42,7 @@ export const updateEmployee = (employee) => {
 	return(dispatch, getState, {getFirestore})=>{
 		const firestore = getFirestore();
 
-		firestore.collection('employees').doc(employee.id).set({
+		firestore.collection('employees').doc(employee.employeeId).set({
 			firstName: employee.firstName,
 			lastName: employee.lastName,
 			gender: employee.gender,

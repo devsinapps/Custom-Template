@@ -13,7 +13,7 @@ class FirebaseForm extends React.Component{
 	render(){
 		const { cityOfCountry } = this.state
 		const { countryState, value } = this.props
-		const enabled = value.id.length > 0
+		const enabled = value.employeeId.length > 0
 		return(
 			<Form onSubmit={this.props.inputEmployee}>
 				<Row form>
@@ -112,7 +112,7 @@ class FirebaseForm extends React.Component{
 					<Button color='primary' disabled={enabled}> Save </Button> {' '}
 					<Button color='warning' onClick={this.props.updateEmployee} disabled={!enabled}> Update </Button> {' '}
 					<Button color='danger' onClick={this.props.deleteEmployee} disabled={!enabled}> Delete </Button> {' '}
-					<Button color='info'> Reset </Button> 
+					<Button color='info' onClick={this.props.resetButton}> Reset </Button> 
 				</FormGroup>
 			</Form>
 		)

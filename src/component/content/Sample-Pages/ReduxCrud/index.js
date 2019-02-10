@@ -46,6 +46,13 @@ class ReduxCrud extends React.Component{
 			email: email
 		}
 		this.props.inputData(data)
+		// Handle State, if Success. Set Set to Default
+		this.setState({
+			id: '',
+			name: '',
+			username: '',
+			email: ''
+		})
 	}
 
 	deleteData = () => {
@@ -53,6 +60,13 @@ class ReduxCrud extends React.Component{
 		const check = window.confirm('Update Data ?')
 		if(check === true){
 			this.props.deleteData(id)
+			// Handle State, if Success. Set Set to Default
+			this.setState({
+				id: '',
+				name: '',
+				username: '',
+				email: ''
+			})
 		}else{
 			return null
 		}
@@ -70,10 +84,27 @@ class ReduxCrud extends React.Component{
 				updateEmail: email
 			}
 			this.props.updateData(data)
+			// Handle State, if Success. Set Set to Default
+			this.setState({
+				id: '',
+				name: '',
+				username: '',
+				email: ''
+			})
 		}else{
 			return null
 		}
 		
+	}
+
+	resetButton = () => {
+		// Handle State, if Success. Set Set to Default
+		this.setState({
+			id: '',
+			name: '',
+			username: '',
+			email: ''
+		})
 	}
 	render(){
 		
@@ -102,6 +133,7 @@ class ReduxCrud extends React.Component{
 								onSubmit={this.onSubmit}
 								deleteData={this.deleteData}
 								updateData={this.updateData}
+								resetButton={this.resetButton}
 							/>
 						</Dropdown_Col_12>
 					</Row>

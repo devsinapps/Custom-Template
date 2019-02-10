@@ -14,7 +14,7 @@ import { firestoreConnect } from 'react-redux-firebase'
 import { Container, Row, Col, Card, CardBody, Breadcrumb, BreadcrumbItem } from 'reactstrap'
 class FirebaseCrud extends React.Component{
 	state = {
-		id: '',
+		employeeId: '',
 		firstName: '',
 		lastName: '',
 		gender: '',
@@ -27,9 +27,8 @@ class FirebaseCrud extends React.Component{
 	}
 
 	getDataRow = (employee) => {
-		console.log(employee)
 		this.setState({
-			id: employee.id,
+			employeeId: employee.id,
 			firstName: employee.firstName,
 			lastName: employee.lastName,
 			gender: employee.gender,
@@ -42,42 +41,103 @@ class FirebaseCrud extends React.Component{
 		})
 	}
 
+
+	// Handle value from form input
 	onChange = (e) => {
 		this.setState({
 			[e.target.id]: e.target.value
 		})
 	}
 
+	//Handle Input New Employee
 	inputEmployee = (e) => {
 		e.preventDefault();
 		this.props.inputEmployee(this.state)
+		// Handle State, if Success. Set Set to Default
+		this.setState({
+			employeeId: '',
+			firstName: '',
+			lastName: '',
+			gender: '',
+			age: '',
+			country: '',
+			city: '',
+			address: '',
+			education: '',
+			createdAt: ''
+		})
 	}
 
+	//Handle Delete Employee
 	deleteEmployee = (e) => {
-		const { id } = this.state
+		const { employeeId } = this.state
 		const check = window.confirm('Delete?')
 		if(check === true){
-			this.props.deleteEmployee(id)
+			this.props.deleteEmployee(employeeId)
+			// Handle State, if Success. Set Set to Default
+			this.setState({
+				employeeId: '',
+				firstName: '',
+				lastName: '',
+				gender: '',
+				age: '',
+				country: '',
+				city: '',
+				address: '',
+				education: '',
+				createdAt: ''
+			})
 		}else{
 			return null
 		}
 	}
 
+	//Handle Update Employee
 	updateEmployee = (e) => {
-		const { id, firstName, lastName, gender, age, country, city, address, education, createdAt } = this.state
-		const employee = { id, firstName, lastName, gender, age, country, city, address, education, createdAt }
+		const { employeeId, firstName, lastName, gender, age, country, city, address, education, createdAt } = this.state
+		const employee = { employeeId, firstName, lastName, gender, age, country, city, address, education, createdAt }
 		const check = window.confirm('Delete?')
 		if(check === true){
 			this.props.updateEmployee(employee)
+			// Handle State, if Success. Set Set to Default
+				this.setState({
+					employeeId: '',
+					firstName: '',
+					lastName: '',
+					gender: '',
+					age: '',
+					country: '',
+					city: '',
+					address: '',
+					education: '',
+					createdAt: ''
+				})
 		}else{
 			return null
 		}
 		
 	}
+
+	//Handle Reset Button
+	resetButton = () => {
+		// Handle State, if Success. Set Set to Default
+		this.setState({
+			employeeId: '',
+			firstName: '',
+			lastName: '',
+			gender: '',
+			age: '',
+			country: '',
+			city: '',
+			address: '',
+			education: '',
+			createdAt: ''
+		})
+	}
 	render(){
 		const { employees, countryState } = this.props
-		const { id, firstName, lastName, gender, age, country, city, address, education } = this.state
-		const value = { id, firstName, lastName, gender, age, country, city, address, education }
+		const { employeeId, firstName, lastName, gender, age, country, city, address, education } = this.state
+		const value = { employeeId, firstName, lastName, gender, age, country, city, address, education }
 		if(employees){
 			return(
 				<div className='FirebaseCrud'>
@@ -102,6 +162,7 @@ class FirebaseCrud extends React.Component{
 									inputEmployee={this.inputEmployee}
 									deleteEmployee={this.deleteEmployee}
 									updateEmployee={this.updateEmployee}
+									resetButton={this.resetButton}
 								/>
 							</Dropdown_Col_12>
 						</Row>
@@ -128,7 +189,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return{
 		inputEmployee: (newEmployee) => dispatch(inputEmployee(newEmployee)),
-		deleteEmployee: (id) => dispatch(deleteEmployee(id)),
+		deleteEmployee: (employeeId) => dispatch(deleteEmployee(employeeId)),
 		updateEmployee: (employee) => dispatch(updateEmployee(employee))
 	}
 }
